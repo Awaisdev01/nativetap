@@ -1,0 +1,47 @@
+name: Data freshness
+on:
+  schedule:
+    - cron: "0 9 1 * *"   # 1st of every month
+  workflow_dispatch:
+jobs:
+  check-sources:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Fingerprint upstream sources
+        run: |
+          # Hash the pages we mirror so upstream changes are detectable.
+          mkdir -p /tmp/fg
+          curl -sL https://developer.apple.com/design/human-interface-guidelines -o /tmp/fg/hig.html || true
+          curl -sL https://m3.material.io/components -o /tmp/fg/m3.html || true
+          sha256sum /tmp/fg/* > /tmp/fg/current.txt || true
+          cat /tmp/fg/current.txt || true
+      - name: Compare with last fingerprint
+        id: compare
+        run: |
+          LAST="distribution/fingerprints.txt"
+          if [ -f "$LAST" ] && diff -q "$LAST" /tmp/fg/current.txt >/dev/null 2>&1; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+          fi
+      - name: Open freshness issue on upstream change
+        if: steps.compare.outputs.changed == 'true'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            await github.rest.issues.create({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              title: 'Upstream design sources changed — review data CSVs',
+              body: 'The fingerprint of Apple HIG / Material 3 pages changed. ' +
+                    'Review the affected CSVs in `.claude/skills/nativetap/data/`, ' +
+                    'update rows, bump `data_version` and `last_checked` in `VERSION.json`, ' +
+                    'and commit the new fingerprint. Reviewer-facing diff makes the update auditable.',
+              labels: ['data-freshness']
+            });
+      - name: Save fingerprint
+        if: steps.compare.outputs.changed == 'true'
+        run: |
+          mkdir -p distribution
+          cp /tmp/fg/current.txt distribution/fingerprints.txt

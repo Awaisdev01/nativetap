@@ -1,0 +1,18 @@
+{
+  "data_version": 1,
+  "last_reviewed": "2026-11-19",
+  "sources": {
+    "hig": {
+      "name": "Apple Human Interface Guidelines",
+      "url": "https://developer.apple.com/design/human-interface-guidelines",
+      "last_checked": "2026-11-19",
+      "note": "Verified against iOS 18/iPadOS 18 HIG; iPadOS 18 top tab bar row included."
+    },
+    "material3": {
+      "name": "Material 3 guidelines",
+      "url": "https://m3.material.io/components",
+      "last_checked": "2026-11-19",
+      "note": "Verified against M3 current component specs."
+    }
+  }
+}
