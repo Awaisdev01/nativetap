@@ -1,0 +1,11 @@
+topic,rule,flutter,swiftui,android,failure_mode_if_wrong
+Offline state design,Cache-first UI with freshness stamps,stale-while-revalidate pattern,URLCache + custom freshness UI,Coil/Room + freshness UI,Infinite spinner in subway
+Retry UX,Auto-retry with backoff + manual,Exponential backoff interceptor,URLSession retry policies,OkHttp retry interceptor,Hammering refresh button
+Optimistic updates,"Apply locally, reconcile later",Local-first state updates,SwiftData local writes first,Room + Flow as source of truth,Rollback shock on conflict
+Conflict resolution,Last-writer-wins or CRDT; surface conflicts,Local-first packages,CloudKit conflict handling,WorkManager + Room,Silent data loss
+Timeouts,"8-15s network, 30s uploads",Timeout options on dio/http,URLSession timeoutInterval,OkHttp timeouts,Hanging requests
+Error taxonomy,Distinguish no-network vs server vs bug,DioExceptionType mapping,URLError codes,IOException types,"""Something went wrong"" for everything"
+Background sync,Batch + defer; work-manager patterns,workmanager plugin,BGTaskScheduler,WorkManager constraints,"Battery drain, OS kills"
+Pagination,"Cursor-based, prefetch 1 page ahead",infinite_scroll_pagination,Custom paging state,Paging 3 library,Jump-loading lists
+Push vs poll,"Push for urgency, poll for data",FCM + APNs,APNs,FCM,Battery-draining polling loops
+API resilience,Circuit breaker on repeated failures,Dio interceptor breaker,Custom wrapper,OkHttp + custom breaker,Retry storms crash backend

@@ -1,0 +1,9 @@
+topic,rule,ios,android,mistake
+Permission timing,"Ask in context, never at launch",Provisional + in-context pre-prompt,Runtime permission after value shown,Launch-day modal = permanent deny
+Channels,User-meaningful categories,Thread groups,Channel per category: orders/social/promo,One channel for everything
+Quiet hours,Respect focus modes,interruptionLevel active default,Honor Do not disturb,Critical alerts for non-emergencies
+Deep links,Open the exact content,userInfo payload to route,pendingIntent content route,Opening home instead of the item
+Grouping,Thread related notifications,threadIdentifier,setGroup + summary,Notification spam flood
+Actions,2 quick actions inline max,UNNotificationAction,NotificationAction,More than 3 = unusable
+Badges,Actionable count only,badgeNumber,setNumber(count),Decorative badges
+Re-opt-in,Settings deep-link explainer if denied,openSettingsURLString,Notification settings intent,Nagging repeat prompts

@@ -41,14 +41,21 @@ Top rules (full list in the reference):
 ## Searching the Data
 
 ```bash
-# All domains:
+# All 23 domains:
 python3 scripts/search.py "touch target size"
 
 # One domain:
 python3 scripts/search.py "dark mode elevation" --domain color
 python3 scripts/search.py "list performance" --domain flutter
 
-# See what data exists:
+# Route to the domains that matter for a stack:
+python3 scripts/search.py "offline" --stack flutter
+python3 scripts/search.py "hinge" --stack swiftui
+
+# Machine-readable / diagnostics:
+python3 scripts/search.py "paywall" --json
+python3 scripts/search.py --stats        # rows per domain
+python3 scripts/search.py --checklist    # the 40 thumb rules
 python3 scripts/search.py --list-domains
 ```
 
@@ -67,7 +74,19 @@ python3 scripts/search.py --list-domains
 | `color` | color-mobile.csv | Dark mode, dynamic color, contrast, semantic tokens |
 | `motion` | motion.csv | Transition specs with durations per platform |
 | `icons` | app-icons.csv | Every icon size for iOS/Android/watch/store |
-| `styles` | styles.csv | 10 mobile visual styles with when-to-use/avoid |
+| `styles` | styles.csv | 49 mobile visual styles with when-to-use/avoid |
+| `a11y` | a11y.csv | Screen reader, focus order, live regions, 200% type, color-blind |
+| `performance` | performance.csv | Cold start <2s, jank, image decode, memory, battery targets |
+| `forms` | forms.csv | Keyboard types, autofill, OTP, validation timing, submit state |
+| `components` | components-specs.csv | Measurable spec: bar heights, row heights, FAB, sheet, radius |
+| `notifications` | notifications.csv | Permission timing, channels, deep links, badges, actions |
+| `tablet-foldable` | tablet-foldable.csv | Two-pane 600dp+, hinge, window resize, stylus, shortcuts |
+| `store` | assets-store.csv | Screenshot strategy, keywords, feature graphic, A/B tests |
+| `navigation` | navigation-ia.csv | 10 IA patterns: tabs, drawer, hub-spoke, deep-link-first |
+| `offline` | networking-offline.csv | Cache-first UI, retry backoff, optimistic updates, sync |
+| `onboarding` | onboarding-retention.csv | Time-to-value, progressive disclosure, D1/D7 hooks |
+| `monetization` | monetization.csv | Paywall timing, trials, restore, store-compliant CTAs |
+
 
 ## Workflow
 

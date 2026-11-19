@@ -9,3 +9,42 @@ Data-Dense Dashboard,both,Compact grids of metrics,"Tabular nums, 8px grid, spar
 Playful Rounded,both,"Bouncy, big radii, expressive","24px+ radii, springy transitions",Kids; social; casual games,Enterprise; medical
 Editorial Serif,both,Magazine typography-led,"Serif display, generous leading",Reading apps; news; premium,Data entry; dashboards
 Dark Glass Terminal,both,Dark + mono + glass accents,"Monospace, terminal accents, vibrancy",Dev tools; prosumers,Mass-market consumer
+Neo-Skeuomorphism 2.0,both,Realistic depth returns with modern materials,"Soft inner shadows, realistic textures, layered depth",Premium hardware-adjacent apps; camera/music UIs,Flat lists; text-heavy screens
+Brutalist Mono,both,Monochrome brutalism with mono type,"Black/white only, hard rules, mono font",Portfolio; art tools; statements,Consumer apps needing warmth
+Candy Gradient,both,Sweet multi-stop gradients,"Pastel-to-vivid gradients, white cards, rounded 20px+",Social; lifestyle; Gen-Z,Finance; medical; enterprise
+Fintech Dark Card,both,Dark surfaces with glowing data cards,"Deep navy/black, neon accent per metric, card grids",Crypto; banking; trading,Kids apps; readability-critical
+Editorial Newsprint,both,News-style hierarchy on mobile,"Serif headlines, thin rules, dateline labels",News; magazines; blogs,Data entry; gaming
+Children Big Buttons,both,"Huge targets, saturated color, audio feedback","96dp targets, 4-color palette, icon-first",Kids 3-8; accessibility-first apps,Adult productivity
+Corporate Trust Blue,both,"Conservative, verified-safe","Navy+white+gray, dense forms, no motion surprises",Banking; insurance; government,Casual games; social
+Fitness Energy,both,Active dark with progress rings,"Rings/progress arcs, bold numerals, dark default",Fitness; health tracking,Reading apps; forms-heavy
+Zen Spacious,both,Meditation-style whitespace,"40px+ padding, muted sage/blues, slow fades",Wellness; sleep; mindfulness,Dense dashboards
+Retro Pixel,both,Deliberate 8-bit nostalgia,"Pixel fonts, chunky borders, dithering",Games; fun tools; crypto meme apps,Professional services
+Terminal Pro,both,IDE-grade dark data tool,"Monospace everywhere, syntax-color accents, dense rows",Dev tools; log viewers; terminals,Grandma-facing apps
+Luxury Minimal Gold,both,Black/white/gold premium restraint,"Thin serif, gold accents on black, slow reveals",Premium fashion; jewelry; concierge,Mass-market; kids
+Hand-drawn Sketch,both,"Sketchy warmth, human touch","Wobbly strokes, notebook textures, marker highlights",Note apps; education; journals,Banking; medical
+Holographic Iridescent,both,Color-shifting gradient surfaces,"Iridescent gradients over dark, glass cards",Music; fashion; NFT/crypto,Accessibility-first; forms
+Map-First Utility,both,"Map as home, chrome minimal","Full-bleed map, floating cards, bottom sheet everything",Ride-sharing; delivery; travel,Content reading apps
+Chat Bubble Conversational,both,Messenger-native patterns,"Bubbles, delivery ticks, composer docked bottom",Messaging; support bots,Form-heavy data apps
+Camera-First Immersive,both,Full-bleed camera + minimal chrome,"Camera behind, floating controls, gesture nav",Camera apps; AR; social capture,Reading; settings-heavy
+Feed Immersive Stories,both,Full-screen tap-through stories,"Full-bleed vertical, progress bars at top, tap zones",Stories; onboarding; tutorials,Data entry; settings
+Voice-First Ambient,both,"Glanceable, audio-primary","Huge waveform, minimal text, dark by default",Voice assistants; audio players,Form apps; data tables
+Foldable Dual-Pane,both,Master-detail across the fold,"List pane + detail pane, hinge-aware padding",Foldables; email; notes on foldables,Single-pane phone-only flows
+Watch Complication,watchos,Glance-scale information density,"Circular layouts, 4 corners, tint-safe",Watch apps; complications,Phone layouts scaled down
+TV 10-foot,tvos/android-tv,Focus-driven large targets,"Focus scale 1.1x, 3m readability, directional nav",TV apps,Touch patterns
+CarPlay Distraction-Free,carplay,"Glance-only, voice-first","Huge touch rows, no text entry, template-driven",In-car apps,Any dense UI or typing
+AR Spatial Anchors,both,3D-anchored overlays,"Plane detection UI, depth occlusion, world-space cards",AR measurement; furniture placement,2D list flows
+Biometric Gate,both,Auth-first entry,"Face/fingerprint gate, brand moment on lock",Banking; password; health records,Casual content apps
+Offline-First Sync,both,Sync status as first-class UI,"Sync banners, conflict toasts, cache freshness stamps",Field tools; notes; IoT companions,Purely online services
+Chart-Heavy Analytics,both,Every screen answers with a chart,"Sparklines first, drill-down cards, tabular toggle",Analytics; IoT dashboards,Emotional/lifestyle apps
+Localization-First RTL,both,Mirrored everything,"Auto-mirrored icons, RTL-aware gestures, logical properties",Arabic/Hebrew markets,Hardcoded left/right logic
+Accessibility Hero,both,"AA+ everywhere, switch-access ready","Giant type option, high-contrast mode, focus ordering",Accessibility-focused; government,Ignoring dynamic type
+Neuro-Divergent Calm,both,Low-stimulation design system,"Muted palette, no auto-play, predictable layout",ADHD-friendly; autism-friendly; education,Flashing promos; surprise animations
+Two-Thumb Power,both,Ergonomics as the design system,"All controls in bottom 40%, reachability heatmap",Keyboards; camera; heavy daily-use,Top-corner primary actions
+Single-Hand Kiosk,both,"One-purpose, zero-nav","Single screen, giant CTA, self-reset",Line-busting kiosks; ordering,Anything requiring exploration
+Digital Wallet Stacked,both,Card-stack metaphors,"Stacked cards, fan gestures, front-card details",Wallets; tickets; boarding passes,Tabular data
+Habit Grid,both,Calendar-grid habit tracking,"Dense month grids, streak flames, tap-to-fill",Habit trackers; language learning,Long-form reading
+Onboarding Carousel,both,Value-prop before signup,"3-5 swipe slides, progress dots, skip always",New social/productivity apps,Skippable critical education
+Blurred List Background,both,Content visible through chrome,"Blur behind nav/tab, content scrolls under",Media; immersive feeds,Dense text lists (legibility)
+Soft Neumorphic Dark,both,Dark extruded panels,Dark base + subtle dual shadows,Smart home; device control,Text-dense screens
+Duotone Photo,both,Two-color treated photography,"Duotone image overlays, matching accents",Music; events; editorial,Product photography (false color)
+Split-Focus Forms,both,One field per screen,"Full-screen field stepper, giant keyboard-friendly input",High-completion flows; onboarding,Power-user data entry

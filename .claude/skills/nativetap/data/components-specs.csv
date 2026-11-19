@@ -1,0 +1,13 @@
+component,ios,android,flutter_default,golden_numbers
+App bar height,44pt nav / 96pt large,64dp top bar,AppBar 56dp,Large title collapse 200->56
+Tab bar height,49pt + 34pt safe area,80dp M3 nav bar,56-80dp,Badge max 99+
+List row height,44pt minimum,48dp minimum,56dp default,Two-line 72dp; avatar rows 72dp
+FAB size,n/a,56dp regular / 40dp small / 96dp large,56dp,Extended height 48dp
+Bottom sheet,Detents medium/large,Modal standard,showModalBottomSheet,Half-expand most common
+Snackbar,n/a,6s max,4s default,Action timeout 10s
+Segmented control,32pt height,40dp,40dp,Max 4-5 segments
+Switch,51x31pt,52x32dp,platform adaptive,Thumb travel 14-20dp
+Slider,"4pt track, 28pt thumb",44dp handle,48dp touch height,Value label on drag
+Row padding,16pt horizontal,16dp,16dp,Never 8dp page margins
+Card radius,10-16pt continuous,12dp,12dp,System squircle on iOS
+Edge padding,16pt,16dp,16dp,"Screen margins, not 8dp"

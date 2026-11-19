@@ -1,0 +1,11 @@
+pattern,structure,best_for,tradeoff,framework_support
+Tabs,Flat 3-5 top-level destinations,Consumer apps; parallel sections,No deep nesting visible,UITabBarController / NavigationBar + body / Scaffold bottomNav
+Drawer,Hidden menu behind hamburger,6+ sections; power tools,Hides IA; poor discoverability,NavigationView legacy / ModalDrawer
+Bottom sheet hub,Sheet-based task switching,Utilities; media; maps,Sheet fatigue on complex apps,UISheetPresentationController / ModalBottomSheet
+Single-stack,One drill-down hierarchy,Focused utilities; onboarding,Back-heavy for parallel tasks,UINavigationController / Navigator
+Hub-and-spoke,Dashboard hub + detail spokes,Dashboards; smart home,Hub gets crowded,Any stack + dashboard root
+Deep-link-first,URL-routed everywhere,Content apps; sharing,Requires routing discipline,go_router / NavigationStack / Navigation Compose
+Modal-only,Everything is a modal flow,Kiosk; single-purpose,Stack overflow on long flows,Present modals with completion
+Tab + detail split,"Tabs on phone, split on tablet",Adaptive universal apps,Two layouts to maintain,NavigationSplitView / adaptive Scaffold
+Gesture-driven,Swipe-based navigation,Camera; stories; media,Hidden affordances,Custom pan handlers
+Search-first,Search as home,Content-heavy; e-commerce,Weak for browse-discovery,searchable / SearchBar

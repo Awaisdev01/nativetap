@@ -1,0 +1,11 @@
+topic,rule,detail,mistake
+Time-to-value,First meaningful action under 60s,Delay signup until after the core loop if possible,Signup wall before any value
+Progressive disclosure,Teach one feature at the moment of use,Contextual tooltips beat tour slides,7-slide carousel nobody reads
+Empty state,First-empty screen shows a live example,Sample data + create CTA,"Blank ""No data"" screens"
+Signup friction,Email/social/apple SSO only,Phone verification only when needed,Forced SMS verification at start
+Permission pre-prompts,Explain before the OS dialog,"In-app explainer, then system prompt",System prompt with no context
+Skippable tours,All education skippable,Skip button always visible,Locked carousel
+Aha moment tracking,Instrument the first-core-action,Analytics event for first success,Tracking only downloads
+D1/D7 hooks,"Return triggers: streaks, digests, new content",Push digests at user-chosen time,Generic daily blasts
+Re-onboarding,Re-teach after major redesigns,One-screen whats-new modal,Silently rearranged UI
+Churn saves,Exit-intent value recap before cancel,Show what they will lose,Instant confirm dialog

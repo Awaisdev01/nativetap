@@ -1,0 +1,13 @@
+topic,target,flutter,swiftui,android,symptom_if_wrong
+Cold start,Under 2s to first content,--profile run; defer main init,Startup instrument; lazy init,Baseline profiles + StrictMode,Blank screen; store drop-off
+Frame rate,60fps / 120 on ProMotion,DevTools: no >16ms builds,Core Animation FPS instrument,JankStats + FrameMetrics,Scroll stutter; review complaints
+List jank,Zero build during fling,itemExtent + builder + cacheExtent,LazyVStack stable ids,LazyColumn + contentType,Fling hitches at item boundaries
+Image decode,"Off main thread, pre-sized",cacheWidth or ResizeImage,ImageIO downsampling,Coil/Glide override size,Decode jank scrolling images
+Network on splash,Never block first paint,Init after first frame,Work post onAppear,Post-first-frame work,Frozen splash = uninstall
+Memory,Under 150MB typical,DevTools memory + image cache,Memory gauge,LeakCanary + meminfo,OOM kills on low-RAM devices
+App size,Under 50MB download,--split-per-abi,App thinning,App Bundle + dynamic delivery,Slow install; store warnings
+Battery,No background polling,WorkManager patterns,BGTaskScheduler budget,WorkManager constraints,OS kills app; device heat
+Animation cost,Animate only opacity/transform,Avoid layout-property animations,Same principle,Constrain-only transforms,Janky animations mid-scroll
+Startup work,Move off launch path,@deferred imports; lazy singletons,Lazy bundles,Startup profiles,Slow first interaction
+Rebuild scope,"Rebuild leaf, not tree",Selector/consumer scoping,Per-view observables,derivedStateOf + stable params,Whole-screen rebuilds on tiny change
+Network caching,HTTP cache + SWR,dio cache interceptor,URLCache default,OkHttp Cache,Refetch on every open

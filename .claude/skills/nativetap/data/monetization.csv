@@ -1,0 +1,11 @@
+topic,rule,ios,android,mistake
+Paywall timing,Show after value demonstrated,After core loop sample,After trial of value,Day-1 hard paywall
+Trial design,Auto-renewing trial with reminder,Offer with price display,Free trial with clear terms,Hidden auto-renew = refunds + bans
+SKU simplicity,3 tiers max,Monthly/annual/lifetime,Same,7 confusing tiers
+Restore purchases,Required and one-tap,restoreCompletedTransactions,queryPurchases,Missing restore = support nightmare
+Store-compliant CTA,Use native purchase APIs only,StoreKit / Billing Library,Same,External payment links violate policy (except allowed regions)
+Price anchoring,Show per-month math on annual,Custom UI showing save %,Same,Burying the annual discount
+Ads UX,Never interstitial at task flow,Reward-only or pause-screen,Same,Interstitial mid-checkout
+Family sharing,Enable where possible,SKEnableFamilySharing,Same,Hidden feature users expect
+Currency/locale,Store-managed pricing,App Store price tiers,Play regional pricing,Hardcoded USD worldwide
+Win-back,Lapsed-user offers via push,Subscription offers,Win-back offers,Ignoring lapsed cohorts

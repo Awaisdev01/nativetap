@@ -1,0 +1,14 @@
+topic,rule,flutter,swiftui,android,verify_how
+Screen reader labels,Every interactive element has a label,Semantics(label:),accessibilityLabel,contentDescription,Full TalkBack/VoiceOver walkthrough
+Focus order,Matches visual order,Semantics sortKey or widget order,accessibilitySortPriority,importantForAccessibility,Navigate with screen reader only
+Custom actions,Compound controls expose named actions,Semantics(customAction:),accessibilityCustomActions,AccessibilityNodeInfo actions,Activate by name in reader
+Live regions,Dynamic updates announced,Semantics(liveRegion: true),UIAccessibility announcement,liveRegion attribute,Change content while focused elsewhere
+Headings,Screen titles marked as headings,Semantics(heading: true),accessibilityHeading(.h1),accessibilityHeading property,Rotor/heading navigation jump
+Text contrast in images,Scrim 40%+ behind text over media,Gradient scrim overlay,Background material overlay,Same scrim,Contrast check on worst-case frame
+Target spacing,44pt targets AND 8px apart,IconButton + SizedBox gaps,frame(minWidth:)+contentShape,TouchDelegate expansion,Thumb tap-test on smallest device
+Keyboard / Switch Control,Full function without touch,Focus traversal policy,focusable + onFocusChange,Compose keyboard navigation,External keyboard only pass
+Captions,Media has captions,ClosedCaption widget,accessibilityCaption,CaptioningManager,Muted playback with captions on
+Reduce transparency,Respect the setting,MediaQuery + custom blur toggle,isReduceTransparencyEnabled check,Read secure settings,Enable setting; inspect blur zones
+Font scale 200%,Nothing clipped or ellipsized,Flexible heights,@ScaledMetric,sp units throughout,"Largest accessibility size, every screen"
+Color-blind safety,Never color-only status,Icon + color pairing,Same principle,Same + color roles,Deuteranopia simulation in Xcode
+Haptics settings,Respect system haptic level,HapticFeedback conditional,Generator per setting,VibrationEffect + setting,Haptics off; app stays silent

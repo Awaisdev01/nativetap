@@ -1,0 +1,11 @@
+topic,rule,flutter,swiftui,android,common_mistake
+Field order,Fastest-to-complete; grouped logically,Same principle everywhere,Same,Same,Random order kills completion
+Keyboard type,Match input semantics,textInputType email/number/phone,keyboardType .emailAddress,InputType phone,QWERTY for numbers
+Autofill,System autofill enabled,AutofillGroup + hints,textContentType,Autofill service hints,Re-typing known data
+Validation timing,"On blur or submit, not each keystroke",Focus-based validation,Submit-time gating,Debounced onChanged,Red X while typing
+Inline errors,Under field + announced,errorText in InputDecoration,Red tint + accessibilityValue,supportingText error style,Top-of-form error lists
+Keyboard action,Action = advance or submit,textInputAction next/done,submitLabel .next/.done,imeOptions actionNext,Missing action button
+OTP auto-fill,One-tap code fill,SMS autofill plugins,UITextContentType.oneTimeCode,SMS User Consent API,Manual 6-digit re-entry
+Password field,Show/hide toggle,obscureText toggle,isSecureTextEntry + toggle,transformMethod toggle,Cannot see typed password
+State preservation,Input survives rotation/error,Keep controllers in ViewModel,@State persistence,SavedStateHandle,Rotation wipes the form
+Submit,Busy state + disable,AnimatedSwitcher on button,disabled + ProgressView,isEnabled + progress,Double submissions

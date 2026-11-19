@@ -1,0 +1,8 @@
+topic,rule,flutter,swiftui,android,why
+Two-pane at 600dp+,"List-detail, not stacked",LayoutBuilder adaptive Row,NavigationSplitView,ListDetailPaneScaffold,Phone layout on tablet = 1-star reviews
+Hinge awareness,No content across the hinge,DisplayFeatureSubScreen,n/a iPad,Foldable hinge insets,Button on hinge unusable
+Window resizing,Survive any aspect,MediaQuery adaptive scaffold,Resizable iPadOS windows,WindowSizeClass,Broken split-screen layouts
+Keyboard+trackpad,Full shortcut support,Shortcuts widget,keyboardShortcut,keyboardModifiers,Magic Keyboard users expect shortcuts
+Stylus,Palm rejection + pressure,Listener kind=stylus,PencilKit,MotionEvent stylus source,No pressure feels cheap
+Cross-app drag,Support for primary content,Draggable + DropTarget,NSItemProvider drag,Cross-activity drag,Tablet power users expect it
+Size classes,Compact/Regular breakpoints,Material breakpoints,horizontalSizeClass,WindowSizeClass,One layout fails everywhere

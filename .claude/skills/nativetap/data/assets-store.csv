@@ -1,0 +1,13 @@
+asset,spec,best_practice,mistake
+Screenshot 1,First frame sells the app,"Hero value-prop + caption overlay, best screen",Screenshots of setup screens
+Screenshot count,"iOS 3-10, Play 2-8","Show 4-6: value, core loop, social proof, differentiation",10 near-identical shots
+Caption style,55 chars or fewer each,"Verb-first benefit: ""Track anything in 2 taps""",Feature-listing captions
+Device frame,Clean device mockup or full-bleed,Full-bleed for immersive apps; framed for utility,Mixed frame styles across set
+Play feature graphic,1024x500 PNG,"Single message, brand colors, no small text",Text that vanishes at thumbnail size
+Video preview,"15-30s, first 3s hook",Show the core loop immediately; skip logo intros,30s logo animation
+App preview (iOS),15-30s per orientation,Autoplay-friendly first frame,Sound-dependent storytelling
+Keyword strategy,100 chars iOS,Commas no spaces; no app name duplicates; competitor names forbidden,"Wasting chars on ""app""/""the"""
+Subtitle,30 chars iOS / 80 short desc Play,"Benefit phrase, not category","""Best app for..."""
+In-app events,Use for updates,Deep-link to the exact feature screen,Generic event linking home
+A/B testing,Play store experiments,Test icon first (biggest lever),Testing descriptions before icon
+Icon A/B,Biggest store conversion lever,Test 3 variants; simpler usually wins,Complex icon with text
