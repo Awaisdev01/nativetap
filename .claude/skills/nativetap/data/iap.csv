@@ -1,0 +1,13 @@
+topic,rule,ios,android,flutter,mistake
+StoreKit 2 flow,Products load async; never hardcode price,Product.products(for:),products(for:) then purchase,in_app_purchase plugin,Displaying $4.99 hardcoded then price changes
+Pending transactions,Handle unfinished at launch,Transaction.updates listener always-on,acknowledgePurchase flow,completePurchase in listener,Purchase works once then never again
+Receipt validation,Server-side for subscriptions,App Store Server API,Play Developer API,Backend endpoint,Trusting client receipt = fraud
+Restore UX,Visible restore button on paywall,AppStore.sync(),queryPurchasesAsync,restorePurchases(),No restore = 1-star reviews
+Offer codes,Redeem codes in paywall,presentCodeRedemptionSheet,Play offer codes,N/A via plugins,Support tickets for every code
+Grace period,Soft-fail billing issues,Renewal grace period enabled,Account hold handling,Listen to entitlement changes,Locking out user whose card expired yesterday
+Family sharing entitlement,Check shared purchases,Transaction.ownershipType,Purchase family flag,in_app_purchase ownership,"Paying user shares, family gets paywall"
+Upgrade/downgrade,Proration handling,Subscription change policies,Replacement modes,Plugin update flow,Double-charging on tier switch
+Sandbox testing,Test full flow with sandbox accounts,StoreKit config files,License testers,Both stores sandbox,Discovering flow broken day of launch
+Price localization,Store-managed regional pricing,SKProduct priceLocale,Play regional pricing,Plugin locale data,$ shown to EUR users
+Entitlement caching,Cache entitlement offline,Local receipt mirror,Play cached purchases,Local entitlement store,Paywall after airplane mode
+Refund handling,Revoked entitlements,Transaction.refund detection,Voided purchases API,Listen revocation,Refunded user keeps premium forever

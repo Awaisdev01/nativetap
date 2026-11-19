@@ -70,6 +70,13 @@ nativetap (design) → prism_doctor (code audit) → shipcheck (launch audit)
 | `camera` | Permissions, warm-up, barcode scanning |
 | `maps` | Battery discipline, clustering, camera handoff |
 | `audio-haptics` | Haptic vocabulary, silent mode, audio focus |
+| `compose3` | Modern Jetpack Compose: typed nav, stable state, previews |
+| `visionos` | Spatial UI: gaze+pinch, comfort, ornaments |
+| `iap` | StoreKit 2, pending transactions, refunds, restore |
+| `errors` | Human error copy, retries, inline form errors |
+| `app-clips` | App Clips / Instant Apps patterns |
+| `voiceover` | 12 screen-reader recipes |
+| `charts` | fl_chart / Swift Charts / Vico, zero-axis rule |
 
 Zero dependencies. Pure CSV + a search script. Works offline.
 

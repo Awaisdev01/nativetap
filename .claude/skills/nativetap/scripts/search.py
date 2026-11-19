@@ -10,7 +10,7 @@ Usage:
   python search.py --stats
   python search.py "<query>" --stack flutter   # auto-route to relevant domains
 
-Domains (35): styles, gestures, safe-areas, flutter, swiftui, kotlin, hig-ios,
+Domains (42): styles, gestures, safe-areas, flutter, swiftui, kotlin, hig-ios,
   material3, typography, color, motion, icons, a11y, performance, forms,
   components, notifications, tablet-foldable, store, navigation, offline,
   onboarding, monetization
@@ -61,6 +61,13 @@ DOMAINS = {
     'camera': 'camera.csv',
     'maps': 'maps-location.csv',
     'audio-haptics': 'audio-haptics.csv',
+    'compose3': 'compose3.csv',
+    'visionos': 'visionos.csv',
+    'iap': 'iap.csv',
+    'errors': 'errors.csv',
+    'app-clips': 'app-clips.csv',
+    'voiceover': 'voiceover.csv',
+    'charts': 'charts-dataviz.csv',
 }
 
 # Stack routing: query --stack <s> restricts to the domains that matter for
@@ -70,12 +77,12 @@ STACK_DOMAINS = {
                 'typography', 'color', 'motion', 'a11y', 'performance',
                 'forms', 'components', 'navigation', 'offline', 'icons',
                 'animations', 'images', 'security', 'i18n', 'testing',
-                'deep-links', 'widgets-watch'],
+                'deep-links', 'widgets-watch', 'compose3', 'voiceover', 'errors', 'charts'],
     'swiftui': ['swiftui', 'hig-ios', 'gestures', 'safe-areas', 'typography',
                 'color', 'motion', 'a11y', 'performance', 'forms',
                 'components', 'navigation', 'offline', 'icons',
                 'animations', 'images', 'security', 'i18n', 'testing',
-                'deep-links', 'widgets-watch', 'camera'],
+                'deep-links', 'widgets-watch', 'camera', 'visionos', 'voiceover', 'errors', 'charts'],
     'kotlin': ['kotlin', 'material3', 'gestures', 'safe-areas', 'typography',
                'color', 'motion', 'a11y', 'performance', 'forms',
                'components', 'navigation', 'offline', 'icons',
@@ -84,7 +91,7 @@ STACK_DOMAINS = {
     'design': ['styles', 'gestures', 'hig-ios', 'material3', 'typography',
                'color', 'motion', 'components', 'navigation', 'onboarding'],
     'launch': ['icons', 'store', 'notifications', 'monetization',
-               'performance', 'onboarding', 'release', 'push', 'testing'],
+               'performance', 'onboarding', 'release', 'push', 'testing', 'iap', 'app-clips'],
 }
 
 TITLE_KEYS = ('problem', 'interaction', 'topic', 'gesture', 'component',

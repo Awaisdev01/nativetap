@@ -1,0 +1,13 @@
+topic,rule,flutter,swiftui,android,mistake
+Library choice,Community standard first,fl_chart,Swift Charts,Vico / Compose charts,Rolling your own axis engine
+Y-axis starts at zero,Bar charts MUST start at 0,min: 0,default,Same,Truncated bars = lying charts
+Line charts can zoom,Non-zero OK for lines with context,Axis titles + range note,Swift Charts handles it,Same,Zoomed line with no axis labels
+Touch exploration,Each point readable by touch,Chart a11y plugins,Swift Charts audio graph,Haptic data points,Deaf chart to screen readers
+Max series,3-4 series before it is spaghetti,Legend + toggles,Same,Same,10 overlapping lines
+Color-blind safe,Use okabe-ito or shapes+color,Palette choice,Same,Same,Red/green only series
+Mobile chart density,Half the labels of desktop,Rotate/skip x labels,Same,Same,Every hour label on a 24h chart
+Animate on data change,Not on first load,Implicit animation on new data,chartXScale animation,animate*AsState,Dizzying entrance animations
+Sparklines,"In lists and cards, not full charts",Custom painter / fl_chart,Charts framework,Compose canvas,Full chart where a trend arrow works
+Empty chart state,Distinguish no-data from zero,Placeholder + message,Same,Same,Flat zero line for missing data
+Number formatting,Compact for big numbers,NumberFormat.compact,formatted(value),NumberFormat,"12,345,678 in a 100px axis"
+Scrollable wide charts,Pinch or scroll for dense time series,Custom scroll chart,scrollableBehavior,Same,Unreadably squeezed 365 points

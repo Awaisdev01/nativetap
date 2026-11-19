@@ -1,0 +1,11 @@
+topic,rule,detail,mistake
+Windows vs volumes vs spaces,Choose the right container,"Window for 2D, Volume for 3D objects, Space for immersive",2D window floating in 3D space looks lost
+Comfort distance,Content 1.5-3m from eyes,Closer than 1.2m = eye strain,UI jammed at arms length
+Gaze+pinch targets,Minimum target size for eye input,48dp equivalent at distance,Tiny close buttons
+Hover effects,Gaze needs visible focus state,HoverEffect on decorations,No feedback before pinch
+Motion sickness,"Anchor to world, avoid large FOV motion",Reduce blur/parallax for locomotion,Fast moving camera content
+Passthrough discipline,Occlusion for real objects,Show real world through when needed,Full immersion for a shopping app
+Ornaments,Dock controls near windows,Ornament(attachmentAnchor:),Controls floating mid-air
+Text legibility,"Larger than iOS, materials for contrast",ExtraLarge type scales,Thin light text on glass
+Hand skeleton privacy,On-device only,HandSkeleton tracking never leaves device,Uploading hand data
+Shared space etiquette,Careful with spatial audio,Audible from other apps,Blasting spatial audio by default

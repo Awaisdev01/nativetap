@@ -1,0 +1,13 @@
+recipe,situation,flutter,swiftui,android,mistake
+Custom chart,"Convey data, not pixels",Semantics label with summary: Chart: sales up 12% since March,accessibilityLabel + accessibilityValue,contentDescription summary,"Announcing ""image"" for a chart"
+Rating control,"One rotor element, custom action",Semantics + custom actions,accessibilityValue + custom action,AccessibilityDelegate actions,5 unreachable stars
+Slider semantics,Value announced on change,Semantics(value:),accessibilityValue,AccessibilityNodeInfo stateDescription,Silent drags
+Toggle row,Whole row one element,MergeSemantics + Semantics(toggled:),Combine + isOn,AccessibilityDelegate toggle,"Announcing text, chevron, icon separately"
+Dismiss action,Custom swipe gesture accessible,Semantics custom action Dismiss,accessibilityCustomAction,addAction(ACTION_DISMISS),Swipe-to-delete unreachable
+Page indicator,Position announced,Semantics(value: Page 2 of 5),accessibilityValue,stateDescription,Dead dots
+Loading state,Announce start AND end,Semantics(liveRegion) on spinner,UIAccessibility announcement,announceForAccessibility,Silent loading forever
+Form field error,Error linked to field,Semantics + errorText in InputDecoration,accessibilityHint + value,error announced via live region,Error invisible to reader
+Navigation skip,Skip repeated headers,Custom skip action,accessibilityElement grouping,Set heading + navigation,Tab through 10 nav items
+Image text,Real text not text-in-image,Text widgets,Real Text,Real text,Photo of text unreadable
+Countdown timer,Periodic updates,Timer + liveRegion,UIAccessibilityTimer announcements,Live region updates,Reader silent during countdown
+Currency amounts,Read naturally,"$1,299.99 reads as one amount",Same,Same,Digit-by-digit announcement

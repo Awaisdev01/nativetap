@@ -1,0 +1,11 @@
+topic,rule,ios_app_clip,android_instant,mistake
+One task only,Clip = single focused flow,"Order, pay, done in under 30s",Instant app feature = one flow,Cloning the full app into a clip
+Size budget,Under 10MB App Clip / under 15MB instant,App Clip size limits,Feature module size,Bundling full app resources
+Zero signup,Guest flow by default,guestCheckout support,Account-less first run,Forcing account creation in a clip
+Fast entry,Under 2s to interactive,Ephemeral app experience,Instant apps cold start,Splash animations in clips
+Privacy in clips,No hidden tracking,App Clip privacy manifest,Instant app data policy,Silent data collection
+Notifications limit,Clips get 8-hour notification window,App Clip notifications,Limited instant push,Spamming from a clip
+Upgrade path,One tap to full app from clip,App Store overlay,Play Store upgrade flow,Dead-end clip that never upsells
+Entry points,"NFC, QR, App Clip codes, Smart App Banner, Maps",App Clip codes,URL-based instant entry,Only discoverable via search
+Payments,Apple Pay fast path,Apple Pay button mandatory-ish,Google Pay fast path,Card form in a clip
+Testing,Test in real-world trigger conditions,TestFlight App Clip testing,Instant app testing track,Only testing via dev menu

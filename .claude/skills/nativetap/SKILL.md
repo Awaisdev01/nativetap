@@ -41,7 +41,7 @@ Top rules (full list in the reference):
 ## Searching the Data
 
 ```bash
-# All 35 domains:
+# All 42 domains:
 python3 scripts/search.py "touch target size"
 
 # One domain:
@@ -98,6 +98,13 @@ python3 scripts/search.py --list-domains
 | `camera` | camera.csv | Permissions, warm-up, orientation, barcode, capture feedback |
 | `maps` | maps-location.csv | Permission granularity, battery, clustering, camera discipline |
 | `audio-haptics` | audio-haptics.csv | Haptic vocabulary, silent mode, audio focus, ducking |
+| `compose3` | compose3.csv | Modern Compose: typed nav, stable state, derivedStateOf, previews |
+| `visionos` | visionos.csv | Spatial: windows/volumes, gaze+pinch, comfort distance, ornaments |
+| `iap` | iap.csv | StoreKit 2, pending transactions, receipt validation, restore, refunds |
+| `errors` | errors.csv | Human error copy, retry actions, inline form errors, severity matching |
+| `app-clips` | app-clips.csv | App Clips / Instant Apps: one task, size budgets, zero signup |
+| `voiceover` | voiceover.csv | 12 screen-reader recipes: charts, sliders, timers, toggles |
+| `charts` | charts-dataviz.csv | fl_chart/Swift Charts/Vico, zero-axis rule, touch exploration |
 
 
 ## Workflow

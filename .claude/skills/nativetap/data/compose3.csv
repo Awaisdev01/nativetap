@@ -1,0 +1,15 @@
+pattern,rule,code_shape,mistake
+Typed navigation,Type-safe routes via kotlinx.serialization,navController.navigate(Route.Order(id)),String routes with manual bundle parsing
+Stable state,Immutable data classes + @Immutable annotation,data class UiState(val items: List<Item>),Mutable lists in state cause recomposition storms
+derivedStateOf,Compute inside composition cheaply,val isValid by derivedStateOf { email.isNotBlank() },Recomputing in every recomposition
+remember keyed,remember(key) for expensive objects,remember(itemId) { loadBitmap(itemId) },remember without key = stale data
+Collect as state,Flow to State at lifecycle boundaries,viewModel.uiFlow.collectAsStateWithLifecycle(),collectAsState keeps collecting when backgrounded
+Lazy keys,key = { it.id } on LazyColumn items,"items(items, key = { it.id })",Index keys break on reorder/delete animations
+Content type,contentType for heterogeneous rows,contentType = { it.type },No reuse across item types
+Predictive back,Opt-in predictive back in nav,NavHost with predictive back support,Custom back that blocks the system gesture
+Pull refresh,PullToRefreshBox (Material3),PullToRefreshBox(isRefreshing){...},Custom swipe layouts
+Scaffold insets,contentWindowInsets = WindowInsets(0) carefully,Scaffold consumption order,Double padding from nested scaffolds
+Preview multipreview,Show dark/RTL/font-scale at once,"@Preview(name, uiMode, locale, fontScale)",Testing only light-English-1x
+Modifier order,Order matters: padding THEN background,Modifier.padding(8).background(...),background then padding = full-bleed color
+Disposable effect,Cleanup non-compose resources,DisposableEffect { onDispose { stop() } },Leaked listeners/cameras
+LaunchedEffect keys,Restart on subject change,LaunchedEffect(userId) { load(userId) },One-shot effect with stale closure

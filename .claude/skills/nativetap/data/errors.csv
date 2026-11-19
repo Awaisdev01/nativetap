@@ -1,0 +1,13 @@
+topic,rule,bad_example,good_example,framework_note
+Human first,"Plain language, no error codes in body",Error 503: Gateway timeout,We could not reach the server. Retrying...,Error codes go in expandable detail
+Say what happened + what now,Two-part: fact + next action,Failed,Photo did not save. Try again or pick another photo,Buttons named for the action
+Blameless tone,Never accuse the user,Invalid input!!!,That email looks off — check for typos,Neutral phrasing for user errors
+Offline vs broken,Distinguish no-network from server error,Loading failed,You are offline — showing saved content,Reachability-aware copy
+Empty state errors,No results is not an error,0 results,"No matches for ""shoes"". Try a brand name",Empty ≠ error screens
+Form errors inline,"At the field, at submit time",Alert dialog listing all errors,Red hint under the exact field,Keep keyboard open
+Retry actions,Every error offers a next step,OK,Retry / Cancel,Retry button reloads just the failed part
+"Log the detail, show the summary",Stack traces in logs not UI,NullPointerException at ...,Something went wrong on our side. Report #A12,Copyable error ID
+Destructive confirm,Name the consequence,Are you sure?,Delete 3 photos? This cannot be undone,Count in the confirmation
+Toast vs dialog vs inline,Match severity,Error toast for payment failure,Payment failed as full-screen with retry,"Toasts for minor, dialogs for blocking"
+Update prompts,Version errors push upgrade gracefully,"Update required, no button",This version is retired — Update app,Never dead-end old versions
+Loading fails fast,Timeout under 15s with retry,Infinite spinner,Taking too long — check connection,Timeouts everywhere
