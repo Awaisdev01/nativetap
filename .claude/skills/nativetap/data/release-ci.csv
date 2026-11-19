@@ -1,0 +1,11 @@
+topic,rule,detail,tooling,mistake
+Version bump automation,One command = version+tag+changelog,Standard version/semantic release,Fastlane + CI,Manual version edits
+Signed CI builds,"Signing in CI, not dev machine",Match/certificate in CI secrets,Keystore in CI secrets,Local-only release builds
+Staged rollout,10% -> 50% -> 100%,Play staged rollout / phased release,Same,Day-1 full rollout with a crash
+Crash-free gate,Block rollout under 99.5% crash-free,Crashlytics + Play vitals gates,Same,Rolling out blind
+Hotfix pipeline,Path from bug to store under 4h,Pre-approved fastlane lanes,Same,Rebuilding release from scratch
+Release notes per build,User-facing notes written with the PR,Conventional commits -> shipcheck release,Fastlane changelog,"""Bug fixes and improvements"""
+Env parity,Staging uses prod-shaped backend,Feature flags + staging env,Same,Works only on dev
+Symbol upload,Upload symbols for readable crashes,dSYM upload,Proguard mapping upload,Unsymbolicated crash stacks
+Post-release checklist,"Verify version, review monitoring, pinned issue",Release runbook,Same,Silent regression for days
+Rollback plan,Know how to halt a rollout,Play halt / App Store remove,Same,Discovering the button mid-crisis

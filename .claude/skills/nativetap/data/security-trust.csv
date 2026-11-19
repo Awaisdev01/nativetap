@@ -1,0 +1,13 @@
+topic,rule,ios,android,flutter,mistake
+Biometric auth,"System biometrics, never custom PIN first",LocalAuthentication,BiometricPrompt,local_auth plugin,Home-grown password gate
+Key storage,"Keychain / Keystore, NEVER SharedPreferences",Keychain Services,Android Keystore,flutter_secure_storage,Token in plain prefs = breach
+Screenshots of sensitive data,Flag secure / hidden in app switcher,blur overlay on background,FLAG_SECURE,window flag via native,Bank balance visible in task switcher
+SSL pinning,Pin for banking/health,TrustKit / Info.plist,Network Config pins,good cert pinning plugins,Pin without backup = bricked app on cert rotate
+Jailbreak/root detection,Soft-check for sensitive apps,DeviceCheck / checks,Play Integrity API,integrity packages,Punishing legitimate rooted users
+Code obfuscation,Shrink+obfuscate release builds,Default toolchain,R8/proguard,--obfuscate --split-debug-info,Reading business logic in APK
+Secrets in binary,NEVER embed API keys; proxy instead,Server-side proxy,Same,Same,API key strings visible via strings tool
+Privacy manifest,Declare SDK data use,PrivacyInfo.xcprivacy,Play Data Safety,N/A native,Silent SDK tracking violations
+Deep link validation,Validate all incoming link params,Universal Links verification,App Links verification,uni_links parsing,Malicious link crashes or injects
+Pasteboard discipline,Only read with user intent,UIPasteboard detect patterns,Clipboard read warnings,Clipboard plugin,Silent clipboard sniffing
+Session security,Token refresh + force logout on auth errors,Auth interceptor,Auth interceptor,Dio interceptor,Expired-token zombie states
+Crash privacy,Scrub PII from crash reports,Crashlytics privacy settings,Same,Same,User email in crash logs

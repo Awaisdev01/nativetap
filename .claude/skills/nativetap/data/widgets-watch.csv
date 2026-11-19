@@ -1,0 +1,9 @@
+topic,rule,ios,android,flutter,mistake
+Widget exists for a reason,Only if it answers a glance question,WidgetKit + Timeline,Glance (Compose) / RemoteViews,home_widget package,Widget that opens the app instead of showing data
+Widget sizing,Support systemFamily small+medium+large,supportedFamilies,Glance sizing,home_widget: iOS sizes via native,One rigid size only
+Widget updates,Timeline budget aware,WidgetKit reload budget (40-70/day),WorkManager + AppWidgetManager update,Data through App Groups,Polling the widget every minute (budget killed)
+Interactive widgets,iOS 17 interactive intents / Android buttons,AppIntent-based toggles,RemoteViews onClickPendingIntent,"N/A via plugin, native needed",Fake buttons
+Widget deep link,Tap widget element to exact content,widgetURL + Link,setOnClickActivity,iOS widgetURL via native,"Widget opens home, not the item"
+Data sharing,App Group / shared store,App Group UserDefaults,SharedPreferences + widget provider,App Group via native setup,Widget can not reach app data
+Watch complication,Glance-scale; update budget,ClockKit complications,Jetpack Wear tiles,N/A pure native,Phone UI squeezed onto watch
+Watch app size,Fast-launch under 2s,WatchOS quick interactions,Wear cold start,N/A,Long launch on wrist

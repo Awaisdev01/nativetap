@@ -1,0 +1,11 @@
+topic,rule,flutter,swiftui,android,mistake
+Formats,"WebP for photos, PNG for UI assets, SVG vectors",Image.asset + webp,Asset catalogs handle it,WebP everywhere,Full-res JPEG bundled in APK
+Sizing,Serve exact display size x dpi,cacheWidth,@2x/@3x assets,Coil override size,Decoding 4000px image for 40dp avatar
+Placeholders,Blurhash/thumbhash instant preview,blurhash_dart,BlurHash libraries,BlurHash libs,White flash while loading
+Caching strategy,Disk cache with max size,cached_network_image maxAge,URLCache / custom,Coil disk cache,Redownloading every session
+Video playback,Autoplay muted loop for feeds; player for content,video_player,AVPlayer,ExoPlayer/Media3,Sound autoplay anywhere
+AV thumbnails,Generate cheap previews,video thumbnail packages,AVAssetImageGenerator,MediaMetadataRetriever,Full decode for a list thumb
+Camera capture,Respect orientation + flash state,camera plugin,AVCaptureSession,CameraX,Rotation-broken captures
+Memory pressure,Evict on low memory,imageCache.clear on memory warning,didReceiveMemoryWarning,onTrimMemory,OOM during gallery scroll
+Zoom UX,"Sub-pixel crisp at 1x, gesture interchangeable",InteractiveViewer,MagnificationGesture,zoomable Compose,Zoom that snaps back rudely
+Color management,Wide-gamut (P3) for photos,ColorSpace handling,DisplayP3 assets,Wide gamut support,Washed-out P3 photos

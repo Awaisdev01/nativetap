@@ -46,7 +46,30 @@ nativetap (design) → prism_doctor (code audit) → shipcheck (launch audit)
 | `color` | Dark mode rules, dynamic color, contrast, semantic tokens |
 | `motion` | Transition specs with exact durations per platform |
 | `icons` | Every icon size: iOS/Android/watch/store |
-| `styles` | 10 mobile visual styles with when-to-use/avoid |
+| `styles` | 49 mobile visual styles with when-to-use/avoid |
+| `a11y` | Screen reader, focus order, 200% type, color-blind safety |
+| `performance` | Cold start, jank, image decode, memory, battery — with numbers |
+| `forms` | Keyboard types, autofill, OTP, validation timing |
+| `components` | Measurable specs: bar heights, row heights, FAB, sheets |
+| `notifications` | Permission timing, channels, deep links, badges |
+| `tablet-foldable` | Two-pane 600dp+, hinge, stylus, shortcuts |
+| `store` | Screenshot strategy, keywords, feature graphic, A/B tests |
+| `navigation` | 10 IA patterns with tradeoffs |
+| `offline` | Cache-first UI, retry backoff, optimistic updates |
+| `onboarding` | Time-to-value, progressive disclosure, retention hooks |
+| `monetization` | Paywall timing, trials, restore, compliant CTAs |
+| `widgets-watch` | Home widgets, WidgetKit budgets, watch complications |
+| `animations` | Springs, easing, stagger, shared elements |
+| `images` | Formats, sizing, blurhash, video, camera |
+| `security` | Biometrics, keychain, SSL pinning, FLAG_SECURE |
+| `deep-links` | Universal/App Links, deferred links |
+| `push` | Token rotation, foreground behavior, throttling |
+| `i18n` | RTL, plurals, text expansion, Arabic digits |
+| `testing` | Golden tests, a11y audits, device matrix |
+| `release` | Staged rollout, crash-free gates, hotfix lanes |
+| `camera` | Permissions, warm-up, barcode scanning |
+| `maps` | Battery discipline, clustering, camera handoff |
+| `audio-haptics` | Haptic vocabulary, silent mode, audio focus |
 
 Zero dependencies. Pure CSV + a search script. Works offline.
 

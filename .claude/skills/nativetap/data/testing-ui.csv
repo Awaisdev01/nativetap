@@ -1,0 +1,10 @@
+topic,rule,flutter,swiftui,android,why
+Golden tests,Layout regressions caught visually,golden_toolkit,Snapshot testing libs,Paparazzi / Roborazzi,Silent layout breakage
+A11y audit tests,Automated accessibility scan,AccessibilityChecker (integration),A11y audit (XCUITest),Accessibility Test Framework,Shipping unlabeled buttons
+Integration flows,Real end-to-end on key paths,integration_test,XCUITest,Espresso / Compose test,"Unit tests passing, app broken"
+Different locales,Test RTL + longest locale,Run tests with locale override,Scheme locale override,Locales on emulator,RTL bugs found by users
+Font scale 200%,Every screen tested at max,textScaleFactor override,Dynamic type XXL in tests,Font scale in tests,Clipped text at accessibility sizes
+Slow network test,Test on 3G profiles,throttled dev tools,Network Link Conditioner,Emulator network throttling,Hangs only visible on real bad networks
+Empty/error/loading,All three states per screen,State-machine widget tests,View state tests,Sealed state tests,Untested error branches crash in prod
+Cold start regression,Measure on CI,flutter drive timeline,XCApp launch metric,Macrobenchmark,Slowly rotting startup
+Real device matrix,Test low-end Android + small iPhone,Firebase Test Lab,Cloud devices,Same,Works only on dev flagship

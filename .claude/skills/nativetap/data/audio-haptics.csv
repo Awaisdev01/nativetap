@@ -1,0 +1,9 @@
+topic,rule,ios,android,flutter,mistake
+Haptic vocabulary,"3-4 haptic meanings max, app-wide",Impact selection notification trio,VibrationEffect constants,HapticFeedback class,Different buzz every screen
+Audio session,Respect silent mode except media,AVAudioSession category,AudioFocus handling,audioplayers session config,Clicking sounds in silent mode
+Haptic settings,Respect system haptics-off,CoreHaptics + setting check,Vibrator intensity setting,Check settings,Buzzing with haptics disabled
+Sound effects,"Short, non-musical, skippable",System sound services,SoundPool,audioplayers assets,Long jingles on tap
+Ambient sound,"Duck under voice, never fight music",Duck others option,AudioFocus gain,Session options,Blasting over user music
+Volume UX,Relative volume reasonable,n/a,STREAM handling,Player volume 0-1,Full-blast effect sounds
+Recording,Clear permission + indicator,Request + mic indicator,Request + privacy indicator,record plugin,Silent failures on deny
+Haptic on success,Confirmed haptic after animation apex,At animation landmark,At animation end,Post-await buzz,Buzz before the visual completes

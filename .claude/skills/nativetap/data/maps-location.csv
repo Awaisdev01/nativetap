@@ -1,0 +1,9 @@
+topic,rule,flutter,swiftui,android,mistake
+Permission granularity,"Coarse first, fine only if feature needs",geolocator settings,CLAuthorization .whenInUse,ACCESS_COARSE first,Fine location for a weather app
+Battery discipline,No GPS when backgrounded,geolocator streams stopped,Stops on scenePhase,Pause on lifecycle,Draining GPS on background
+Cluster markers,Cluster above 50 markers,map cluster plugins,Cluster annotations,Clustering in Maps Compose,1000 taps-worth of pins
+Camera discipline,Dont fight user pans,Own camera only on major change,region modest changes,Camera position state,Map snapping back while panning
+Custom markers,Brand them but keep tap targets,Marker widgets,MKAnnotationView,Marker composable,Tiny unclickable pins
+Offline maps,Cache viewport tiles,Map cache plugins,Custom tile cache,Maps SDK offline,Blank grid in elevator
+Directions UX,Hand off to system app for turn-by-turn,url_launch maps,MKMapItem open,Intent to Maps,Building worse nav than the OS
+Privacy display,Show when location used,Status indicator,Blue bar,Privacy indicator,Silent background tracking

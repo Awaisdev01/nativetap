@@ -1,0 +1,9 @@
+topic,rule,ios,android,flutter,mistake
+Token rotation,Re-register on every app start + token change,didRegisterForRemoteNotifications,onNewToken,firebase_messaging callbacks,Pushes going to dead tokens
+Foreground behavior,Suppress or custom-banner in foreground,UNUserNotificationCenter delegate,Notification style channel config,foreground presentation config,Double notification (system + in-app)
+Tap routing,Route to exact content via payload,userInfo deep link,pendingIntent route,message deep link handler,Opening home screen
+Silent pushes,"For data sync, budget-limited",content-available background,data-only FCM,Background message handler,Abusing silent pushes = throttled
+Rich media,Image in notification where valuable,Notification Service Extension,BigPictureStyle,N/A native needed,Text-only for visual products
+Permissions fallback,In-app notification center if denied,Custom inbox,In-app inbox,In-app messages list,Dead silence after deny
+Localization,Notification copy localized,.lproj handling,Per-locale FCM,Locale-aware payload,English pushes to Arabic users
+Throttling self,"Max N/day per category, self-enforced",Own rate limiter,Same,Same,Notification fatigue = mass disable

@@ -1,0 +1,9 @@
+topic,rule,flutter,swiftui,android,mistake
+Permission first,Camera permission with pre-explainer,camera + permission handler,AVCaptureAuthorization,CameraX permissions,Cold permission prompt
+Scan-to-switch,Camera up in under 1s,camera warm-up,AVCaptureSession start,CameraX bind to lifecycle,2s black viewfinder
+Preview orientation,Match display rotation,camera plugin handling,previewLayer orientation,UseCase rotation,Sideways preview
+Flash state,Persist across shots,Own state,AVCaptureDevice torchMode,CameraX flash mode,Flash resets every shot
+Capture feedback,Shutter haptic + flash animation,Feedback + overlay,Shutter animation,Same,Silent confusing capture
+Gallery handoff,Last shot preview thumb,Image picker,PHPhotoLibrary,Photo Picker,No way to review what you took
+Barcode scanning,"ML-based, multi-format",mobile_scanner,VisionKit,ML Kit,Zxing-only legacy libs
+Frame-rate vs quality,Give control; default quality,Resolution presets,Session presets,Quality selector,Always-max drains battery

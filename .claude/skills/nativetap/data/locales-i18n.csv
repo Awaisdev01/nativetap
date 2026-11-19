@@ -1,0 +1,11 @@
+topic,rule,flutter,swiftui,android,mistake
+Externalize strings,Zero hardcoded strings from day 1,intl + arb files,String Catalogs,strings.xml,Find-replace hell later
+RTL mirroring,"Mirror layout, not content",Directionality + mirrored icons,Flips for RTL automatically,supportsRtl + autoMirrored,Hardcoded EdgeInsets.only(left:)
+Arabic numerals,Locale-aware digits,NumeralSystem handling,Locale.numberFormat,Locale digits,Latin digits in Arabic locale
+Text expansion,Design for 40% longer German,Flexible heights,Auto Layout constraints,wrap_content,Truncated German buttons
+Pluralization,Real plural rules per locale,intl plural,stringsdict / xcstrings plurals,plurals resource,"""1 items"" bugs"
+Date formats,Never hardcode MM/DD,DateFormat per locale,Date.FormatStyle,DateFormat default,US format worldwide
+Currency,Locale currency + symbol position,intl currency,Currency format,CurrencyFormat,$ before everywhere
+CJK line breaking,Break anywhere rules for CJK,Text overflow handling,lineBreakStrategy,Same,Mid-word breaks in Japanese
+Per-locale screenshots,Localized store screenshots,Fastlane frameit,Same,Same,English screenshots worldwide
+Pseudo-localization test,Test before real translations,Fake-locale debugging,Xcode pseudo localization,Pseudolocale,Discovering layout bugs post-launch

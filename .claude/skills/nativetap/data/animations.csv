@@ -1,0 +1,13 @@
+topic,spec,flutter,swiftui,android,why
+Standard duration,"200-300ms UI, 150ms micro",Duration 250ms typical,.animation(.easeOut(duration: 0.25)),motionDuration 250,Faster feels broken; slower feels dead
+Easing,"easeOut for enters, easeIn for exits",Curves.easeOut / Curves.easeIn,easeOut/easeIn,FastOutSlowInInterpolator (all enters),Linear easing looks robotic
+Springs,Springy for direct manipulation,SpringSimulation,spring(response:damping:),SpringAnimation (dynamic animation),Bounce everywhere = toy
+Enter vs exit asymmetry,Exit faster than enter,"100-150 exit, 250 enter",Same ratios,Same,Exit as slow as enter = sluggish
+Interruptibility,Cancel/reverse mid-flight,AnimationController reverse,withAnimation cancellable,Animatable cancellation,Restart-from-zero on retap
+Shared element,Hero transitions between screens,Hero widget,matchedGeometryEffect,Shared transitions (Compose),No visual continuity = jarring jump
+Stagger,Lists animate 30-50ms per item,Interval + CurvedAnimation,Delay per index,Animate asychronous,All items pop at once
+Ornament vs function,"Animation communicates, never decorates",Tweens tied to state change,Transaction state,animate*AsState,Ambient looping shine everywhere
+Loading choreography,Skeleton shimmer under 500ms cycle,Skeleton packages,Custom shimmer,Shimmer library,Fast flicker shimmer
+Count-up numbers,"Tabular nums, 400ms ease-out count",ImplicitAnimatedNumber or custom,ContentTransition(numericText()),animateIntAsState,Numbers snapping = jarring
+Page indicator sync,"Indicator moves with drag, not snap after",PageView indicator binding,tabView selection binding,TabLayoutMediator,Indicator lagging page
+Haptic sync,Impact at animation apex,HapticFeedback at completion,UIImpactFeedback at landmark,performHaptic at keyframe,Buzz before visual change

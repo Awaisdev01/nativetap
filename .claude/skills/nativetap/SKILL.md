@@ -41,7 +41,7 @@ Top rules (full list in the reference):
 ## Searching the Data
 
 ```bash
-# All 23 domains:
+# All 35 domains:
 python3 scripts/search.py "touch target size"
 
 # One domain:
@@ -86,6 +86,18 @@ python3 scripts/search.py --list-domains
 | `offline` | networking-offline.csv | Cache-first UI, retry backoff, optimistic updates, sync |
 | `onboarding` | onboarding-retention.csv | Time-to-value, progressive disclosure, D1/D7 hooks |
 | `monetization` | monetization.csv | Paywall timing, trials, restore, store-compliant CTAs |
+| `widgets-watch` | widgets-watch.csv | Home screen widgets, WidgetKit budgets, watch complications |
+| `animations` | animations.csv | Springs, easing, stagger, shared elements, interruptibility |
+| `images` | images-media.csv | Formats, sizing, blurhash, video, camera capture, memory |
+| `security` | security-trust.csv | Biometrics, keychain, SSL pinning, FLAG_SECURE, secrets |
+| `deep-links` | deep-links.csv | Universal/App Links, deferred links, routable screens |
+| `push` | push-lifecycle.csv | Token rotation, foreground behavior, rich media, throttling |
+| `i18n` | locales-i18n.csv | RTL, plurals, text expansion, Arabic digits, pseudo-loc |
+| `testing` | testing-ui.csv | Golden tests, a11y audits, 200% type, device matrix |
+| `release` | release-ci.csv | Staged rollout, crash-free gates, hotfix lanes, symbols |
+| `camera` | camera.csv | Permissions, warm-up, orientation, barcode, capture feedback |
+| `maps` | maps-location.csv | Permission granularity, battery, clustering, camera discipline |
+| `audio-haptics` | audio-haptics.csv | Haptic vocabulary, silent mode, audio focus, ducking |
 
 
 ## Workflow

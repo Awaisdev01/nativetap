@@ -1,0 +1,9 @@
+topic,rule,ios,android,flutter,mistake
+Universal/App Links,"Verified https links, not custom schemes",Associated Domains + AASA,App Links + assetlinks.json,go_router + verification files,Custom-scheme-only links (hijackable)
+Deferred deep links,Link survives install,Deferred deep link solutions,Play Install Referrer,install referrer packages,Losing the referral after install
+Every screen routable,"URL per screen, shareable",Route per VC,Route per composable,go_router paths,Screens without URLs = no sharing
+"Link to state, not screen",Carry params: /order/123 not /orders,Path params,Path args,Typed route params,Opening order list instead of THE order
+Cold vs warm handling,Handle both launch paths,willContinue userActivity,onNewIntent,didPushRoute / route info,Warm-start links ignored
+Fallback for uninstalled,Web fallback that converts,Universal link to web,Instant app / web,N/A server side,Dead link on uninstalled device
+QR/nFC entry,Same routes for QR codes,Same URL routes,Same,Same,Separate QR-only scheme
+Analytics attribution,Tag every link source,UTM-style params,Play referrer,Own analytics,No idea which links convert

@@ -10,7 +10,7 @@ Usage:
   python search.py --stats
   python search.py "<query>" --stack flutter   # auto-route to relevant domains
 
-Domains (23): styles, gestures, safe-areas, flutter, swiftui, kotlin, hig-ios,
+Domains (35): styles, gestures, safe-areas, flutter, swiftui, kotlin, hig-ios,
   material3, typography, color, motion, icons, a11y, performance, forms,
   components, notifications, tablet-foldable, store, navigation, offline,
   onboarding, monetization
@@ -49,6 +49,18 @@ DOMAINS = {
     'offline': 'networking-offline.csv',
     'onboarding': 'onboarding-retention.csv',
     'monetization': 'monetization.csv',
+    'widgets-watch': 'widgets-watch.csv',
+    'animations': 'animations.csv',
+    'images': 'images-media.csv',
+    'security': 'security-trust.csv',
+    'deep-links': 'deep-links.csv',
+    'push': 'push-lifecycle.csv',
+    'i18n': 'locales-i18n.csv',
+    'testing': 'testing-ui.csv',
+    'release': 'release-ci.csv',
+    'camera': 'camera.csv',
+    'maps': 'maps-location.csv',
+    'audio-haptics': 'audio-haptics.csv',
 }
 
 # Stack routing: query --stack <s> restricts to the domains that matter for
@@ -56,17 +68,23 @@ DOMAINS = {
 STACK_DOMAINS = {
     'flutter': ['flutter', 'hig-ios', 'material3', 'gestures', 'safe-areas',
                 'typography', 'color', 'motion', 'a11y', 'performance',
-                'forms', 'components', 'navigation', 'offline', 'icons'],
+                'forms', 'components', 'navigation', 'offline', 'icons',
+                'animations', 'images', 'security', 'i18n', 'testing',
+                'deep-links', 'widgets-watch'],
     'swiftui': ['swiftui', 'hig-ios', 'gestures', 'safe-areas', 'typography',
                 'color', 'motion', 'a11y', 'performance', 'forms',
-                'components', 'navigation', 'offline', 'icons'],
+                'components', 'navigation', 'offline', 'icons',
+                'animations', 'images', 'security', 'i18n', 'testing',
+                'deep-links', 'widgets-watch', 'camera'],
     'kotlin': ['kotlin', 'material3', 'gestures', 'safe-areas', 'typography',
                'color', 'motion', 'a11y', 'performance', 'forms',
-               'components', 'navigation', 'offline', 'icons'],
+               'components', 'navigation', 'offline', 'icons',
+               'animations', 'images', 'security', 'i18n', 'testing',
+               'deep-links', 'widgets-watch', 'camera'],
     'design': ['styles', 'gestures', 'hig-ios', 'material3', 'typography',
                'color', 'motion', 'components', 'navigation', 'onboarding'],
     'launch': ['icons', 'store', 'notifications', 'monetization',
-               'performance', 'onboarding'],
+               'performance', 'onboarding', 'release', 'push', 'testing'],
 }
 
 TITLE_KEYS = ('problem', 'interaction', 'topic', 'gesture', 'component',
