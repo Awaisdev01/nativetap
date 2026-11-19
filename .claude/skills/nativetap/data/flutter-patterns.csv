@@ -1,0 +1,17 @@
+problem,wrong_pattern,right_pattern,why,category
+Scrolling long lists,ListView(children: [...]) for 100+ items,ListView.builder with itemExtent,Builds only visible items; itemExtent skips layout,performance
+Images in lists,Image.network raw,cached_network_image with placeholder + fade,Decode jank on main thread; no retry; no cache,performance
+Fixed-height text rows,Container(height: 48) around text,minHeight constraints,Fixed heights break at large font scales,accessibility
+Touch targets,GestureDetector on a 32px icon,IconButton with min 44x44 constraints,Material default 48dp; visual vs hit target differ,ergonomics
+Forms,Plain Column of TextFields,resizeToAvoidBottomInset + scroll + focus traversal,Keyboard covers focused field,forms
+Navigation,Navigator.push everywhere,go_router typed routes + deep links,"Deep links, web URL sync, guards in one place",architecture
+State,setState for app state,Riverpod/Bloc scoped at feature level,Rebuild scope control; testability,architecture
+Platform adaptation,"One codebase, zero platform checks",ThemeExtension + Platform checks for nav/pickers,Material widgets on iOS feel wrong,platform-trust
+Animations,Implicit animations for sequences,Explicit controllers or flutter_animate,No midpoint/cancel control,motion
+Safe areas,Hardcoded 44.0 padding,SafeArea + MediaQuery values,Device sizes vary 47/54/59pt,layout
+Dark mode,Ad hoc ThemeData(brightness: dark),ColorScheme.fromSeed with dark variant,"Elevation via surfaceTone, not shadows",theming
+Hero transitions,Manual route animations,Hero widget + PageRouteBuilder,Recognized share-element transition,motion
+Empty states,Text(No data),Illustration + sentence + primary action,Blank screens look broken,ux
+Pull-to-refresh,Custom RefreshIndicator logic,RefreshIndicator.standard,Platform-consistent semantics,ux
+Error handling,try/catch to global SnackBar,AsyncValue guards + errorBuilder per subtree,Errors render near their source,ux
+Fonts,GoogleFonts at every build,Load once in main + textTheme override,Runtime fetch per widget = jank + flicker,performance

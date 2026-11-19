@@ -1,0 +1,6 @@
+area,context,handling_flutter,handling_swiftui,handling_android,typical_size
+Notch/Dynamic Island,iPhone 14+,SafeArea + MediaQuery.padding.top,safeAreaInset(edge: .top),DisplayCutout via WindowInsets,47-59pt
+Home indicator,All iPhones X+,SafeArea bottom; no floating buttons inside 34pt,safeAreaInset(edge: .bottom),Gesture nav insets,34pt
+Status bar,All,MediaQuery.padding.top for custom headers,.statusBarHidden only for immersive,systemBars insets,44-54pt
+Keyboard,Text screens,MediaQuery.viewInsets.bottom + resizeToAvoidBottomInset,.ignoresSafeArea(.keyboard),adjustResize windowSoftInputMode,260-336pt
+Gesture bar (Android),Gesture nav devices,MediaQuery.padding.bottom,n/a (Android only),Draw behind with mandatoryGestureInsets,24-48dp

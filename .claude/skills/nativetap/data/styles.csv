@@ -1,0 +1,11 @@
+style,platform,summary,key_elements,when_to_use,avoid
+Native iOS,iOS,"Apple HIG look: SF Symbols, spring animations, blur materials","Large title nav, SF Symbols, system materials, safe areas",iOS-first apps; users expect platform feel,Porting Android patterns 1:1
+Material 3 Expressive,Android,"Dynamic color, tonal surfaces, big shapes","Dynamic color, large FABs, tonal elevation",Android-first; content-heavy flows,iOS nav patterns on Android
+Glassmorphism,both,Frosted glass: blur + translucency,"Backdrop blur, 1px light borders",Media apps; hero surfaces over imagery,Text-heavy lists; low contrast over blur
+Neo-brutalism,both,"Bold borders, hard offset shadows, raw","4px borders, saturated blocks, stark type",Indie tools; dev-focused; Gen-Z brands,Banking/health apps
+Soft UI (neumorphism-lite),both,Subtle extruded same-color surfaces,Low-contrast dual shadows,Utility widgets,Long lists; a11y-critical flows
+Minimal Flat,both,"Whitespace, 1 accent, typographic hierarchy","Generous whitespace, single accent color",Productivity; settings; onboarding,Affordance-heavy flows
+Data-Dense Dashboard,both,Compact grids of metrics,"Tabular nums, 8px grid, sparklines",Fintech; analytics; admin,Consumer onboarding
+Playful Rounded,both,"Bouncy, big radii, expressive","24px+ radii, springy transitions",Kids; social; casual games,Enterprise; medical
+Editorial Serif,both,Magazine typography-led,"Serif display, generous leading",Reading apps; news; premium,Data entry; dashboards
+Dark Glass Terminal,both,Dark + mono + glass accents,"Monospace, terminal accents, vibrancy",Dev tools; prosumers,Mass-market consumer

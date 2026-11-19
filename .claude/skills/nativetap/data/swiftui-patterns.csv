@@ -1,0 +1,11 @@
+problem,wrong_pattern,right_pattern,why
+Scroll performance,VStack in ScrollView for dynamic lists,LazyVStack or List with stable ids,Lazy builds cells on demand
+Navigation,NavigationView (deprecated),NavigationStack + navigationDestination,Value-based: deep links + type safety
+Sheets,fullScreenCover for everything,sheet with presentationDetents,Detents preserve context
+State ownership,@ObservedObject everywhere,"@State local, @StateObject owned, @ObservedObject borrowed",Ownership defines lifetime
+Dark mode,Manual color checks per view,Color assets with dark variants,Views stay declarative
+Dynamic type,.font(.system(size: 17)) fixed,Semantic styles (.body/.title),Scales with user setting
+Lists,ForEach without ids,Stable .id() or Identifiable,Diffing breaks without identity
+Accessibility,Relying on VStack order,accessibilityElement(children:) + explicit order,"VoiceOver reads layout order, not intent"
+Animations,withAnimation for unrelated changes,Scoped .animation(value:),Unscoped = everything animates
+Search,Manual search UI,searchable modifier,Platform-consistent integration

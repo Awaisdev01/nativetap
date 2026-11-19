@@ -1,0 +1,10 @@
+asset,size,notes
+iOS App Store,"1024x1024 PNG, no alpha","Marketing icon; flattened, no rounded corners (system masks)"
+iOS home,180x180 @3x (60pt),System applies squircle mask — design full-bleed square
+iOS tinted variant,iOS 18+,Design monochrome layer for tinted home mode
+iOS dark variant,iOS 18+,Optional dark appearance icon
+Android adaptive,foreground 108dp (safe zone 66dp center),Background layer extends; mask applied by launcher
+Android legacy,192x192px,For launchers without adaptive support
+Play Store,512x512 PNG 32-bit,High-res store icon
+Notification icon (Android),24dp white+alpha only,Colored notification icons render as gray blobs
+Watch icon,40-92pt,Per watchOS sizes

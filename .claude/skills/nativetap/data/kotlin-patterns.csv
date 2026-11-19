@@ -1,0 +1,11 @@
+problem,wrong_pattern,right_pattern,why
+Lifecycle leaks,Async work in Activity scope,viewModelScope + repeatOnLifecycle,"Coroutines die with owner, not screen"
+Configuration changes,State in Activity fields,ViewModel + SavedStateHandle,Rotation rebuilds wipe fields
+Navigation,Manual Fragment transactions,Navigation Compose typed routes,"Type-safe args, deep links, back-stack"
+Compose performance,Unstable params recomposing,remember + key + derivedStateOf,Recomposition storms
+Lists,Column of items in scroll,LazyColumn with contentType,Lazy composition + reuse
+Insets,Fixed padding for bars,WindowInsets + enableEdgeToEdge,Correct across API levels
+Permissions,Requesting at launch,Scoped requests in context,Store policies + user trust
+Theming,Hardcoded colors in composables,MaterialTheme colorScheme from tokens,Dark mode + dynamic color free
+Back handling,onBackPressed override,PredictiveBackHandler (Android 14+),System back gesture support
+Network,Blocking calls on Main,Dispatchers.IO + Flow,ANRs kill ratings

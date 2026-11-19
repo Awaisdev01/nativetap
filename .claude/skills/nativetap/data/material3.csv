@@ -1,0 +1,11 @@
+component,spec,notes
+Top app bar,"4 variants: small, center-aligned, medium, large",Collapsing on scroll; actions = icons 48dp
+Bottom navigation,Navigation bar (M3) with active indicator pill,3-5 destinations; labels always visible on M3
+FAB,Small/medium/large/extended,One per screen max; extended = icon + text for primary create
+Bottom sheet,Standard vs modal; drag handle required,Modal = user-invoked; standard = persistent content
+Snackbar,"Action optional, 4s duration",Don't stack more than 1; position above nav bar
+Chips,Assist/filter/input/suggestion 4 kinds,Filter chips = multi-select with checkmark
+Cards,Elevated/filled/outlined,"M3 uses tonal elevation (surfaceTint), not shadows"
+Buttons,"Filled, tonal, elevated, outlined, text",Filled = primary action only; one per view
+Switch,"Track 52x32dp, thumb 24dp on state",Icons optional inside thumb
+TextField,Filled (default) vs outlined,Floating label; supporting text for errors/helper

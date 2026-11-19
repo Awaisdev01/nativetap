@@ -1,0 +1,9 @@
+role,ios_size,android_size,flutter_token,notes
+Display,34-56pt,displayLarge 57sp / medium 45sp,displayLarge/Medium/Small,"Marketing numbers, hero stats only"
+Title,28-22pt,headlineSmall 24sp,headlineMedium/Small,Screen titles; one per screen
+Body,17pt,16sp,bodyLarge,Default reading size; never below 14sp
+Body small,15pt,14sp,bodyMedium,"Secondary text, captions; floor at 12sp for legal"
+Caption,12-13pt,11-12sp,labelSmall,"Timestamps, badges; not for actions"
+Monospace,15-17pt,14-16sp,n/a,Numbers in code/prices; use tabular figures
+Weight rules,"Semibold for emphasis, regular default",Medium 500 for buttons,fontWeight,Never bold entire paragraphs
+Line height,"1.2 headings, 1.45 body",M3 body 24/16 = 1.5,height in TextStyle,"Tighter for large, looser for small"

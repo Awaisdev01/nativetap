@@ -1,0 +1,11 @@
+component,spec,notes
+Navigation bar,Large title collapses to inline on scroll,SF Pro; back = chevron + previous title or Back
+Tab bar,"Bottom, 2-5 tabs, SF Symbols 28pt",More than 5 = More screen (bad); badge = count for data
+Bottom sheet,Detents medium/large (UISheetPresentationController),Grabber visible; swipe-down dismiss only when cancelable
+Alert,"Max 2 buttons, title case, verb buttons",Never informational-only (use banner)
+Stepper,+/- buttons,Small bounded numeric adjustments only
+Segmented control,2-5 mutually exclusive options,Not for navigation (use tabs)
+Search field,"Inside nav bar, collapses on focus",Clear button + cancel appear on focus
+Swipe actions,Leading = read/state; trailing = destructive,Destructive = red; no confirmation beyond threshold distance
+Pull-to-refresh,UIRefreshControl in scroll views,Not for detail screens
+Tab bar on iPad,Adapts to top tab bar on iPadOS 18+,Follow platform evolution

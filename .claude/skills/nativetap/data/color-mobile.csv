@@ -1,0 +1,8 @@
+topic,rule,details
+Dark mode text,Never pure white on black,iOS: system label colors; Android: surface tones; Flutter: ColorScheme.dark
+Dark mode elevation,Lighter surfaces = higher elevation,M3 surfaceTint overlays at 5%/8%/11%/12%/14% for levels 1-5
+Semantic colors,Success/warning/error are semantic tokens,Never raw hex in widgets; brand color != success color
+Contrast,"4.5:1 body, 3:1 large/UI",Verify with Accessibility Inspector or Material Theme Builder
+Dynamic color,Android 12+ Material You,ColorScheme.fromSeed; respect wallpaper theming; keep brand fallback
+Accent restraint,1 accent color per app,Plus system grays. Two accents = visual noise
+Status bar,Match surface luminance,Dark content on light surfaces and vice versa; handle per-screen

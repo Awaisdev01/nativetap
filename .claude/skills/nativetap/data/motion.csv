@@ -1,0 +1,11 @@
+interaction,ios_pattern,android_pattern,flutter_implementation,duration
+Screen push,Slide from right + parallax of outgoing,Predictive back scale+slide (Android 14+),PageRouteBuilder 300ms,250-300ms
+Modal appear,Slide up with spring damping,Fade+slide from bottom 10%,showModalBottomSheet easeOutCubic,250-350ms
+Modal dismiss,Slide down with velocity tracking,Reverse of appear,Dismiss direction + spring,200-250ms
+Element appear,Fade + 8pt rise,Fade through (M3),AnimatedSwitcher or flutter_animate,150-200ms
+List item delete,Row collapses + others slide up,Material shared axis X,AnimatedList.removeItem,200-300ms
+Success confirmation,Checkmark scale-bounce,Ripple + check draw,Custom painter or Lottie,300-500ms
+Press feedback,Highlight 0.95 scale or opacity 0.6,Ripple from touch point,InkWell (Material) or custom,instant
+Tab switch,"Cross-fade content, keep container",Fade through M3,AnimatedSwitcher 200ms,150-200ms
+Pull-to-refresh,UIRefreshControl spinner,Material circular indicator,RefreshIndicator,as-triggered
+Reduced motion,"Cross-fade only, no movement",Disable all but opacity,Check MediaQuery.disableAnimations,always-respect

@@ -1,0 +1,11 @@
+gesture,platform,convention,common_mistakes,haptics_pairing
+Tap,both,Single tap = primary action,Whole-row tappable when only chevron should be,light impact on select
+Long-press,both,Context menu / selection mode,Destructive actions on long-press = accidental data loss,medium impact on menu open
+Swipe-right,iOS,Back navigation (edge) / mark-read (lists),Custom back that breaks predictive back,none
+Swipe-left,both,Row actions: delete/archive,Hiding critical actions ONLY behind swipe,warning on delete
+Swipe-down,both,Sheet dismiss / pull-to-refresh at top,Missing dismiss on full-screen modals (users expect it),none
+Pinch,both,Zoom content (images/maps/text),Pinch to navigate (unexpected),none
+Double-tap,both,Zoom (media) / like (social),Critical actions gated only behind double-tap,light impact on like
+Drag-handle,both,Reorder / sheet detents,Non-discoverable handles (need affordance),tick on reorder snap
+Edge-swipe,iOS,Back navigation from screen edge,Blocking edge swipe for a drawer — users rage-uninstall,none
+Back gesture (Android),Android,System back + predictive animations,Intercepting back without PredictiveBackHandler,none

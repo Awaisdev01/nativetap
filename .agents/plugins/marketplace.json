@@ -1,0 +1,13 @@
+{
+  "name": "nativetap",
+  "owner": {
+    "name": "awaisdev5765"
+  },
+  "plugins": [
+    {
+      "name": "nativetap",
+      "source": "./",
+      "description": "Mobile UI/UX design intelligence: HIG, Material 3, Flutter/SwiftUI/Kotlin patterns, gestures, safe areas, dark mode, motion, store assets."
+    }
+  ]
+}
