@@ -1,0 +1,43 @@
+name: Stale or wrong data row
+description: A row in a CSV is outdated or incorrect vs the platform docs
+labels: ["data"]
+body:
+  - type: dropdown
+    id: domain
+    attributes:
+      label: Domain
+      description: Which CSV does the row live in?
+      options:
+        - flutter
+        - swiftui
+        - kotlin
+        - hig-ios
+        - material3
+        - gestures
+        - safe-areas
+        - typography
+        - color
+        - motion
+        - icons
+        - styles
+        - a11y
+        - performance
+        - forms
+        - components
+        - other (say which in the description)
+    validations:
+      required: true
+  - type: textarea
+    id: row
+    attributes:
+      label: The row
+      description: Paste the row title / topic and what's wrong with it
+    validations:
+      required: true
+  - type: textarea
+    id: source
+    attributes:
+      label: Source
+      description: Link to the current Apple HIG / Material 3 / framework doc
+    validations:
+      required: true

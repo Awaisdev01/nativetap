@@ -1,0 +1,18 @@
+name: New data row request
+description: Suggest a mobile rule/pattern/spec worth adding to a domain
+labels: ["enhancement"]
+body:
+  - type: textarea
+    id: idea
+    attributes:
+      label: The rule
+      description: What should agents know? Exact numbers welcome.
+    validations:
+      required: true
+  - type: input
+    id: source
+    attributes:
+      label: Source
+      description: Link to the doc it comes from
+    validations:
+      required: true
