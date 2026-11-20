@@ -7,8 +7,14 @@ thumb-unreachable corners, lists that jank, back gestures that break, dark
 mode that fails contrast. nativetap is the fix: **461 curated mobile design
 rules your agent searches before writing any UI.**
 
+[![Claude Code](https://img.shields.io/badge/Claude_Code-skill-8b5cf6)](https://claude.com/claude-code)
+[![MCP](https://img.shields.io/badge/MCP-server-3b82f6)](mcp/README.md)
+[![CI](https://github.com/awaisdev5765/nativetap/actions/workflows/ci.yml/badge.svg)](https://github.com/awaisdev5765/nativetap/actions/workflows/ci.yml)
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+[![v1.0.0](https://img.shields.io/badge/version-1.0.0-blue)](https://github.com/awaisdev5765/nativetap/releases)
+
 Works with **Claude Code, Cursor, Codex, Windsurf, Antigravity, Kiro, Copilot**
-— any agent that reads SKILL.md files.
+— any agent that reads SKILL.md files, plus any MCP client.
 
 ![nativetap — the mobile design rulebook for AI coding agents](assets/hero.png)
 
