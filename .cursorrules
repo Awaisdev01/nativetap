@@ -1,0 +1,17 @@
+# nativetap — mobile design rules for AI agents (Cursor variant)
+
+You are building MOBILE UI. Before writing or reviewing any phone-screen
+interface, consult the nativetap data:
+
+- Rulebook: .claude/skills/nativetap/references/thumb-rules.md (the 40 thumb rules, P0-P5)
+- Searchable data: .claude/skills/nativetap/data/*.csv — 42 domains, 461 rows
+  (run: python3 .claude/skills/nativetap/scripts/search.py "<topic>")
+
+Hard rules that are non-negotiable (P0):
+- Touch targets >= 44x44pt iOS / 48x48dp Android, 8px+ apart
+- Contrast >= 4.5:1 body text, verified in BOTH light and dark mode
+- Layout survives 200% font scale
+- iOS gets HIG conventions; Android gets Material 3. Never average them.
+- Every icon-only button has an accessibility label
+
+Search before you design. Cite the row you applied in code comments.
