@@ -10,6 +10,8 @@ rules your agent searches before writing any UI.**
 Works with **Claude Code, Cursor, Codex, Windsurf, Antigravity, Kiro, Copilot**
 — any agent that reads SKILL.md files.
 
+![nativetap — the mobile design rulebook for AI coding agents](assets/hero.png)
+
 ```bash
 # What your agent knows after install:
 $ python3 search.py "keyboard covers field"
