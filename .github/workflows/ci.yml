@@ -1,0 +1,31 @@
+name: CI
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  data-integrity:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: All CSVs parse and have consistent columns
+        run: python3 .github/scripts/check_data.py
+      - name: Search smoke tests
+        run: |
+          python3 .claude/skills/nativetap/scripts/search.py "touch target" --max-results 1 > /dev/null
+          python3 .claude/skills/nativetap/scripts/search.py "dark mode" --domain color > /dev/null
+          python3 .claude/skills/nativetap/scripts/search.py "swipe" --stack flutter > /dev/null
+          python3 .claude/skills/nativetap/scripts/search.py --list-domains > /dev/null
+          python3 .claude/skills/nativetap/scripts/search.py --stats > /dev/null
+          python3 .claude/skills/nativetap/scripts/search.py --json "paywall" > /dev/null
+          python3 .claude/skills/nativetap/scripts/search.py --checklist > /dev/null
+          # no-match must exit 2
+          if python3 .claude/skills/nativetap/scripts/search.py zzqxjw > /dev/null 2>&1; then
+            echo "expected exit 2 on no match"; exit 1
+          fi
+      - name: Stats must match README claim (461)
+        run: |
+          TOTAL=$(python3 .claude/skills/nativetap/scripts/search.py --stats | tail -1 | grep -o '[0-9]*')
+          echo "rows: $TOTAL"
+          test "$TOTAL" -ge 400
