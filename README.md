@@ -55,7 +55,24 @@ git clone https://github.com/awaisdev5765/nativetap.git .claude/skills/nativetap
 
 **Cursor / Codex / Windsurf:** copy `SKILL.md` + `data/` + `scripts/` +
 `references/` into your agent's rules directory — the format is the
-cross-agent SKILL.md standard.
+cross-agent SKILL.md standard. Cursor users: the repo ships a
+[`.cursorrules`](.cursorrules) too — just clone and open the folder.
+
+**Any MCP client** (Claude Desktop, Claude Code, Cursor, Codex, …):
+
+```json
+{
+  "mcpServers": {
+    "nativetap": {
+      "command": "python3",
+      "args": ["/absolute/path/to/nativetap/mcp/server.py"]
+    }
+  }
+}
+```
+
+Exposes `search_mobile_rules`, `list_domains`, and `thumb_rules` tools —
+see [`mcp/README.md`](mcp/README.md). Zero dependencies.
 
 **Verify it works:**
 
