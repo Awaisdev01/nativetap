@@ -198,6 +198,13 @@ nativetap is one third of a full "vibe coder ships a real app" toolkit:
 | Code | [prism_doctor](https://pub.dev/packages/prism_doctor) | Hardcoded colors, magic numbers, deprecated imports |
 | Launch | [shipcheck](https://pub.dev/packages/shipcheck) | Store listings, privacy, screenshots, release notes |
 
+## A worked example
+
+[`example/checkout_screen/`](example/checkout_screen/) shows a Flutter
+checkout screen written **without** nativetap (web instincts: top-right
+submit, 32pt targets, fixed heights) and the **same screen with it** — every
+fix cited to the exact row that drove it.
+
 ## Contributing
 
 The data files are the product — PRs adding rows to the CSVs (with correct,
