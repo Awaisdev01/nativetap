@@ -2,12 +2,19 @@
 
 **Mobile UI/UX design intelligence for AI coding agents.**
 
-The mobile-only design skill: Apple HIG, Material 3, Flutter/SwiftUI/Kotlin
-patterns, gestures, safe areas, dark mode, motion specs, and store assets —
-as searchable local data your agent can query instantly.
+Your AI writes great web UI. On phone screens it guesses — buttons in
+thumb-unreachable corners, lists that jank, back gestures that break, dark
+mode that fails contrast. nativetap is the fix: **461 curated mobile design
+rules your agent searches before writing any UI.**
 
 Works with **Claude Code, Cursor, Codex, Windsurf, Antigravity, Kiro, Copilot**
 — any agent that reads SKILL.md files.
+
+```bash
+# What your agent knows after install:
+$ python3 search.py "keyboard covers field"
+→ the exact fix in Flutter, SwiftUI, AND Android — with typical sizes
+```
 
 ![nativetap search in the terminal](assets/search.png)
 
@@ -29,6 +36,58 @@ it's the design stage of a complete shipping pipeline:
 ```
 nativetap (design) → prism_doctor (code audit) → shipcheck (launch audit)
 ```
+
+## Install
+
+**Claude Code / Antigravity / Kiro** (plugin manifest included):
+
+```bash
+git clone https://github.com/awaisdev5765/nativetap.git ~/.claude/skills/nativetap
+```
+
+Or into a single project:
+
+```bash
+git clone https://github.com/awaisdev5765/nativetap.git .claude/skills/nativetap
+```
+
+**Cursor / Codex / Windsurf:** copy `SKILL.md` + `data/` + `scripts/` +
+`references/` into your agent's rules directory — the format is the
+cross-agent SKILL.md standard.
+
+**Verify it works:**
+
+```bash
+python3 .claude/skills/nativetap/scripts/search.py "touch target" --max-results 1
+```
+
+## Usage
+
+Once installed, your agent picks it up automatically when you design or
+review mobile UI. You can also drive the search directly:
+
+```bash
+# Search everything:
+python3 .claude/skills/nativetap/scripts/search.py "touch target"
+
+# Search one domain:
+python3 .claude/skills/nativetap/scripts/search.py "list performance" --domain flutter
+python3 .claude/skills/nativetap/scripts/search.py "dark mode" --domain color
+
+# Restrict to your stack (routes to the ~26 domains that matter):
+python3 .claude/skills/nativetap/scripts/search.py "swipe" --stack flutter
+python3 .claude/skills/nativetap/scripts/search.py "tab bar" --stack swiftui
+
+# What data exists / how many rows:
+python3 .claude/skills/nativetap/scripts/search.py --list-domains
+python3 .claude/skills/nativetap/scripts/search.py --stats
+```
+
+In conversation, just ask your agent:
+
+> "Is this list implementation going to jank?" → searches `flutter` domain
+> "What's the iOS convention for destructive swipe actions?" → searches `hig-ios`
+> "Make my dark mode correct" → searches `color`, checks the 40 rules P0
 
 ## What's inside
 
@@ -80,49 +139,6 @@ nativetap (design) → prism_doctor (code audit) → shipcheck (launch audit)
 
 Zero dependencies. Pure CSV + a search script. Works offline.
 
-## Install
-
-### Claude Code / Antigravity / Kiro (plugin manifest included)
-
-```bash
-git clone https://github.com/awaisdev5765/nativetap.git ~/.claude/skills/nativetap
-```
-
-Or add to your project:
-
-```bash
-git clone https://github.com/awaisdev5765/nativetap.git .claude/skills/nativetap
-```
-
-### Cursor / Codex / Windsurf
-
-Copy `SKILL.md` + `data/` + `scripts/` + `references/` into your agent's
-rules directory — the format is the cross-agent SKILL.md standard.
-
-## Usage
-
-Once installed, your agent picks it up automatically when you design or
-review mobile UI. You can also drive the search directly:
-
-```bash
-# Search everything:
-python3 .claude/skills/nativetap/scripts/search.py "touch target"
-
-# Search one domain:
-python3 .claude/skills/nativetap/scripts/search.py "list performance" --domain flutter
-python3 .claude/skills/nativetap/scripts/search.py "dark mode" --domain color
-python3 .claude/skills/nativetap/scripts/search.py "swipe" --domain gestures
-
-# What data exists:
-python3 .claude/skills/nativetap/scripts/search.py --list-domains
-```
-
-In conversation, just ask your agent:
-
-> "Is this list implementation going to jank?" → searches `flutter` domain
-> "What's the iOS convention for destructive swipe actions?" → searches `hig-ios`
-> "Make my dark mode correct" → searches `color`, checks the 40 rules P0
-
 ## The 40 Thumb Rules (sneak peek)
 
 | Priority | Rule | Numbers |
@@ -141,6 +157,35 @@ In conversation, just ask your agent:
 All 40 with rationale in
 [`references/thumb-rules.md`](.claude/skills/nativetap/references/thumb-rules.md).
 
+## Data freshness
+
+Fair question: *do the CSVs go stale when HIG or Material 3 update?*
+
+Every source is fingerprinted and version-stamped:
+
+- [`data/VERSION.json`](.claude/skills/nativetap/data/VERSION.json) — last
+  reviewed date + which upstream docs each domain was verified against
+- A monthly CI workflow re-hashes the Apple HIG and Material 3 pages; when
+  they change, a review issue opens automatically
+- Updates land as auditable diffs — every rule stays traceable to its source
+
+## FAQ
+
+**Are iOS and Android conventions kept apart, or averaged?**
+Kept apart. Every cross-platform domain has per-platform columns (iOS /
+Android / Flutter / SwiftUI / Compose), so the agent gets the exact HIG or
+Material spec — not a mushy middle. Where platforms genuinely agree, the row
+is shared; where they differ (back gesture, nav patterns), each keeps its
+own rule.
+
+**Does this replace a designer?**
+No — it stops the AI from breaking the platform's hard rules (thumb reach,
+contrast, safe areas, gesture conflicts). The taste is still yours.
+
+**Why CSVs and not a bigger format?**
+Plain data + a 150-line dependency-free search script = works offline, in
+any agent, forever. No SDK, no lock-in, no breakage.
+
 ## The pipeline
 
 nativetap is one third of a full "vibe coder ships a real app" toolkit:
@@ -154,8 +199,9 @@ nativetap is one third of a full "vibe coder ships a real app" toolkit:
 ## Contributing
 
 The data files are the product — PRs adding rows to the CSVs (with correct,
-verified platform data) are very welcome. Search script is dependency-free
-Python 3.
+verified platform data) are very welcome. Each row is small and sourced, so
+a PR per HIG/Material release is cheap and reviewable. Search script is
+dependency-free Python 3.
 
 ## License
 
