@@ -1,30 +1,38 @@
-# 📱 nativetap
+<div align="center">
 
-**Mobile UI/UX design intelligence for AI coding agents.**
+<img src="assets/hero.png" alt="nativetap — the mobile design rulebook for AI coding agents" width="100%">
 
-Your AI writes great web UI. On phone screens it guesses — buttons in
-thumb-unreachable corners, lists that jank, back gestures that break, dark
-mode that fails contrast. nativetap is the fix: **464 curated mobile design
-rules your agent searches before writing any UI.**
+**The mobile design rulebook for AI coding agents.**
+
+464 curated rules · 42 domains · 40 thumb rules · 0 dependencies
 
 [![Claude Code](https://img.shields.io/badge/Claude_Code-skill-8b5cf6)](https://claude.com/claude-code)
 [![MCP](https://img.shields.io/badge/MCP-server-3b82f6)](mcp/README.md)
 [![CI](https://github.com/awaisdev5765/nativetap/actions/workflows/ci.yml/badge.svg)](https://github.com/awaisdev5765/nativetap/actions/workflows/ci.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
-[![v1.0.0](https://img.shields.io/badge/version-1.1.0-blue)](https://github.com/awaisdev5765/nativetap/releases)
+[![v1.1.0](https://img.shields.io/badge/version-1.1.0-blue)](https://github.com/awaisdev5765/nativetap/releases)
 
-Works with **Claude Code, Cursor, Codex, Windsurf, Antigravity, Kiro, Copilot**
-— any agent that reads SKILL.md files, plus any MCP client.
+*Claude Code · Cursor · Codex · Windsurf · Antigravity · Kiro · Copilot · any MCP client*
 
-![nativetap — the mobile design rulebook for AI coding agents](assets/hero.png)
+[Install](#install) · [Audit your code](#audit-your-own-code) · [What's inside](#whats-inside) · [FAQ](#faq)
 
-```bash
-# What your agent knows after install:
-$ python3 search.py "keyboard covers field"
-→ the exact fix in Flutter, SwiftUI, AND Android — with typical sizes
+</div>
+
+---
+
+Your AI writes great web UI. On phone screens it **guesses** — buttons in
+thumb-unreachable corners, lists that jank, back gestures that break, dark
+mode that fails contrast, keyboards that cover the field being typed into.
+
+nativetap is the fix. It's a skill (SKILL.md + searchable CSVs) your agent
+reads **before writing any mobile UI** — and it doesn't just describe the
+rules, it **enforces them with a linter**:
+
+```
+search the rules → design the screen → audit the code → CI gate
 ```
 
-![nativetap search in the terminal](assets/search.png)
+No other mobile design skill closes that loop.
 
 ## Why nativetap
 
@@ -40,14 +48,12 @@ Tailwind, React, and landing pages. Meanwhile:
 
 nativetap is **exclusively about what users touch with their thumbs** — and
 it's the design stage of a complete shipping pipeline:
-
-```
-nativetap (design) → prism_doctor (code audit) → shipcheck (launch audit)
-```
+**nativetap** (design) → **prism_doctor** (code audit) → **shipcheck** (launch audit)
 
 ## Install
 
-**Claude Code / Antigravity / Kiro** (plugin manifest included):
+<details open>
+<summary><b>Claude Code / Antigravity / Kiro</b> (plugin manifest included)</summary>
 
 ```bash
 git clone https://github.com/awaisdev5765/nativetap.git ~/.claude/skills/nativetap
@@ -58,13 +64,20 @@ Or into a single project:
 ```bash
 git clone https://github.com/awaisdev5765/nativetap.git .claude/skills/nativetap
 ```
+</details>
 
-**Cursor / Codex / Windsurf:** copy `SKILL.md` + `data/` + `scripts/` +
-`references/` into your agent's rules directory — the format is the
-cross-agent SKILL.md standard. Cursor users: the repo ships a
-[`.cursorrules`](.cursorrules) too — just clone and open the folder.
+<details>
+<summary><b>Cursor / Codex / Windsurf</b></summary>
 
-**Any MCP client** (Claude Desktop, Claude Code, Cursor, Codex, …):
+Copy `SKILL.md` + `data/` + `scripts/` + `references/` into your agent's
+rules directory — the format is the cross-agent SKILL.md standard.
+
+Cursor users: the repo ships a [`.cursorrules`](.cursorrules) too —
+just clone and open the folder.
+</details>
+
+<details>
+<summary><b>Any MCP client</b> (Claude Desktop, Claude Code, Cursor, Codex, …)</summary>
 
 ```json
 {
@@ -79,6 +92,7 @@ cross-agent SKILL.md standard. Cursor users: the repo ships a
 
 Exposes `search_mobile_rules`, `list_domains`, and `thumb_rules` tools —
 see [`mcp/README.md`](mcp/README.md). Zero dependencies.
+</details>
 
 **Verify it works:**
 
@@ -86,21 +100,32 @@ see [`mcp/README.md`](mcp/README.md). Zero dependencies.
 python3 .claude/skills/nativetap/scripts/search.py "touch target" --max-results 1
 ```
 
-## Audit your own code (new)
+## Audit your own code
+
+The skill ships a static analyzer that flags web-instinct violations in
+**Dart, Swift, and Kotlin**:
 
 ```bash
-# Scan a project for mobile rule violations (Dart, Swift, Kotlin):
+# Scan a project:
 python3 .claude/skills/nativetap/scripts/audit.py lib/
 
-# P0 violations exit 1 — use it as a pre-commit or CI gate:
+# P0 violations exit 1 — drop it in CI as a ship gate:
 python3 .claude/skills/nativetap/scripts/audit.py lib/ || echo "fix P0s before shipping"
 ```
 
-Catches web-instinct violations: fixed heights around text (clips at 200%
-font scale), top-row primary actions (thumb-unreachable),
-`resizeToAvoidBottomInset: false`, per-keystroke validation errors,
-raw hex colors, `ListView(children:)` for dynamic data, unlabeled
-`IconButton`s, `fullScreenCover` overuse, `ignoresSafeArea(.all)`.
+| Catches | Why it matters |
+|---|---|
+| Fixed heights around text | Clips at 200% font scale (P0) |
+| Primary action in a top Row | Thumb-unreachable one-handed |
+| `resizeToAvoidBottomInset: false` | Keyboard covers the focused field |
+| Per-keystroke validation errors | Users get red X's while typing |
+| `ListView(children:)` on dynamic data | Jank on long lists |
+| Raw hex colors | Breaks dark mode + semantic color |
+| Unlabeled `IconButton`s | Screen-reader users hit ghosts |
+| `ignoresSafeArea(.all)` | Content under the notch/Island |
+
+CI verifies the auditor itself on every push: the bad example **must fail**,
+the good one **must pass**.
 
 ## Usage
 
@@ -108,77 +133,41 @@ Once installed, your agent picks it up automatically when you design or
 review mobile UI. You can also drive the search directly:
 
 ```bash
-# Search everything:
-python3 .claude/skills/nativetap/scripts/search.py "touch target"
-
-# Search one domain:
-python3 .claude/skills/nativetap/scripts/search.py "list performance" --domain flutter
-python3 .claude/skills/nativetap/scripts/search.py "dark mode" --domain color
-
-# Restrict to your stack (routes to the ~26 domains that matter):
-python3 .claude/skills/nativetap/scripts/search.py "swipe" --stack flutter
-python3 .claude/skills/nativetap/scripts/search.py "tab bar" --stack swiftui
-
-# What data exists / how many rows:
-python3 .claude/skills/nativetap/scripts/search.py --list-domains
-python3 .claude/skills/nativetap/scripts/search.py --stats
+python3 search.py "touch target"                 # search everything
+python3 search.py "dark mode" --domain color     # one domain
+python3 search.py "swipe" --stack flutter        # your stack's ~26 domains
+python3 search.py --stats                        # 464 rows across 42 domains
+python3 search.py --json "paywall"               # machine-readable
 ```
 
 In conversation, just ask your agent:
 
-> "Is this list implementation going to jank?" → searches `flutter` domain
+> "Is this list implementation going to jank?" → searches `flutter`
 > "What's the iOS convention for destructive swipe actions?" → searches `hig-ios`
-> "Make my dark mode correct" → searches `color`, checks the 40 rules P0
+> "Make my dark mode correct" → searches `color`, checks the P0 rules
 
 ## What's inside
 
-| Data domain | Contents |
-|---|---|
-| **The 40 Thumb Rules** | Priority P0–P5, each with the exact numbers |
-| `flutter` | 16 wrong→right patterns: lists, images, forms, state, navigation |
-| `swiftui` | 10 patterns: NavigationStack, ownership, insets, accessibility |
-| `kotlin` | 10 patterns: Compose perf, ViewModel, predictive back |
-| `hig-ios` | Apple component specs: nav bars, sheets, alerts, swipe actions |
-| `material3` | M3 specs: FABs, nav bar, chips, tonal elevation |
-| `gestures` | Convention per gesture + haptics pairing + common mistakes |
-| `safe-areas` | Notch/Island/home-indicator/keyboard in all 3 frameworks |
-| `typography` | Mobile type scale with pt/sp + Flutter tokens |
-| `color` | Dark mode rules, dynamic color, contrast, semantic tokens |
-| `motion` | Transition specs with exact durations per platform |
-| `icons` | Every icon size: iOS/Android/watch/store |
-| `styles` | 49 mobile visual styles with when-to-use/avoid |
-| `a11y` | Screen reader, focus order, 200% type, color-blind safety |
-| `performance` | Cold start, jank, image decode, memory, battery — with numbers |
-| `forms` | Keyboard types, autofill, OTP, validation timing |
-| `components` | Measurable specs: bar heights, row heights, FAB, sheets |
-| `notifications` | Permission timing, channels, deep links, badges |
-| `tablet-foldable` | Two-pane 600dp+, hinge, stylus, shortcuts |
-| `store` | Screenshot strategy, keywords, feature graphic, A/B tests |
-| `navigation` | 10 IA patterns with tradeoffs |
-| `offline` | Cache-first UI, retry backoff, optimistic updates |
-| `onboarding` | Time-to-value, progressive disclosure, retention hooks |
-| `monetization` | Paywall timing, trials, restore, compliant CTAs |
-| `widgets-watch` | Home widgets, WidgetKit budgets, watch complications |
-| `animations` | Springs, easing, stagger, shared elements |
-| `images` | Formats, sizing, blurhash, video, camera |
-| `security` | Biometrics, keychain, SSL pinning, FLAG_SECURE |
-| `deep-links` | Universal/App Links, deferred links |
-| `push` | Token rotation, foreground behavior, throttling |
-| `i18n` | RTL, plurals, text expansion, Arabic digits |
-| `testing` | Golden tests, a11y audits, device matrix |
-| `release` | Staged rollout, crash-free gates, hotfix lanes |
-| `camera` | Permissions, warm-up, barcode scanning |
-| `maps` | Battery discipline, clustering, camera handoff |
-| `audio-haptics` | Haptic vocabulary, silent mode, audio focus |
-| `compose3` | Modern Jetpack Compose: typed nav, stable state, previews |
-| `visionos` | Spatial UI: gaze+pinch, comfort, ornaments |
-| `iap` | StoreKit 2, pending transactions, refunds, restore |
-| `errors` | Human error copy, retries, inline form errors |
-| `app-clips` | App Clips / Instant Apps patterns |
-| `voiceover` | 12 screen-reader recipes |
-| `charts` | fl_chart / Swift Charts / Vico, zero-axis rule |
+**464 rows across 42 domains**, each with per-platform columns where
+platforms differ:
 
-Zero dependencies. Pure CSV + a search script. Works offline.
+| | | |
+|---|---|---|
+| **The 40 Thumb Rules** P0–P5 | `flutter` 16 wrong→right patterns | `swiftui` 10 patterns |
+| `kotlin` Compose perf + predictive back | `hig-ios` component specs | `material3` M3 specs |
+| `gestures` + haptics pairing | `safe-areas` notch/Island/keyboard | `typography` pt/sp scale |
+| `color` dark mode + contrast | `motion` durations per platform | `icons` every store size |
+| `styles` 49 visual styles | `a11y` screen reader + 200% type | `performance` cold start/jank |
+| `forms` keyboard/OTP/autofill | `components` measurable specs | `notifications` timing/channels |
+| `tablet-foldable` 600dp+/hinge | `store` screenshots/keywords/A-B | `navigation` 10 IA patterns |
+| `offline` cache-first UI | `onboarding` time-to-value | `monetization` paywall timing |
+| `widgets-watch` WidgetKit budgets | `animations` springs/easing | `images` blurhash/camera |
+| `security` keychain/FLAG_SECURE | `deep-links` Universal/App Links | `push` lifecycle |
+| `i18n` RTL/plurals/expansion | `testing` golden/a11y audits | `release` staged rollout |
+| `camera` / `maps` / `audio-haptics` | `compose3` typed nav/previews | `visionos` spatial UI |
+| `iap` StoreKit 2/refunds | `errors` human error copy | `app-clips` / `voiceover` / `charts` |
+
+Zero dependencies. Pure CSV + a dependency-free search script. Works offline.
 
 ## The 40 Thumb Rules (sneak peek)
 
@@ -198,6 +187,23 @@ Zero dependencies. Pure CSV + a search script. Works offline.
 All 40 with rationale in
 [`references/thumb-rules.md`](.claude/skills/nativetap/references/thumb-rules.md).
 
+## A worked example
+
+[`example/checkout_screen/`](example/checkout_screen/) shows a Flutter
+checkout screen written **without** nativetap (web instincts: top-right
+submit, fixed heights, no haptics) and the **same screen with it** — every
+fix cited to the exact row that drove it. Then the auditor confirms:
+
+```bash
+$ python3 scripts/audit.py example/checkout_screen/without_nativetap.dart
+[P0] Fixed height around text: clips at 200% font scale
+[P1] Primary action placed at the END of a top Row — move to bottom thumb zone
+2 findings (1 P0 blocking)        # exit 1
+
+$ python3 scripts/audit.py example/checkout_screen/with_nativetap.dart
+No nativetap rule violations found.  # exit 0
+```
+
 ## Data freshness
 
 Fair question: *do the CSVs go stale when HIG or Material 3 update?*
@@ -206,9 +212,11 @@ Every source is fingerprinted and version-stamped:
 
 - [`data/VERSION.json`](.claude/skills/nativetap/data/VERSION.json) — last
   reviewed date + which upstream docs each domain was verified against
+  (currently: iOS 18/iPadOS 18 HIG + iOS 26 Liquid Glass, M3 + Expressive shapes)
 - A monthly CI workflow re-hashes the Apple HIG and Material 3 pages; when
   they change, a review issue opens automatically
 - Updates land as auditable diffs — every rule stays traceable to its source
+- CI also re-verifies data integrity (parse + column consistency) on every PR
 
 ## FAQ
 
@@ -224,8 +232,9 @@ No — it stops the AI from breaking the platform's hard rules (thumb reach,
 contrast, safe areas, gesture conflicts). The taste is still yours.
 
 **Why CSVs and not a bigger format?**
-Plain data + a 150-line dependency-free search script = works offline, in
-any agent, forever. No SDK, no lock-in, no breakage.
+Plain data + a dependency-free search script = works offline, in any agent,
+forever. No SDK, no lock-in, no breakage. And plain data means anyone can
+audit a row in 30 seconds.
 
 ## The pipeline
 
@@ -237,19 +246,14 @@ nativetap is one third of a full "vibe coder ships a real app" toolkit:
 | Code | [prism_doctor](https://pub.dev/packages/prism_doctor) | Hardcoded colors, magic numbers, deprecated imports |
 | Launch | [shipcheck](https://pub.dev/packages/shipcheck) | Store listings, privacy, screenshots, release notes |
 
-## A worked example
-
-[`example/checkout_screen/`](example/checkout_screen/) shows a Flutter
-checkout screen written **without** nativetap (web instincts: top-right
-submit, 32pt targets, fixed heights) and the **same screen with it** — every
-fix cited to the exact row that drove it.
-
 ## Contributing
 
-The data files are the product — PRs adding rows to the CSVs (with correct,
-verified platform data) are very welcome. Each row is small and sourced, so
-a PR per HIG/Material release is cheap and reviewable. Search script is
-dependency-free Python 3.
+**The data files are the product** — PRs adding rows to the CSVs (with
+correct, verified platform data) are the highest-value contribution. Each
+row is small and sourced, so a PR per HIG/Material release is cheap and
+reviewable. See [`CONTRIBUTING.md`](CONTRIBUTING.md); stale rows can be
+reported with the ["Stale or wrong data row"](../../issues/new?template=stale-row.yml)
+issue template.
 
 ## License
 
