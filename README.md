@@ -4,7 +4,7 @@
 
 Your AI writes great web UI. On phone screens it guesses — buttons in
 thumb-unreachable corners, lists that jank, back gestures that break, dark
-mode that fails contrast. nativetap is the fix: **461 curated mobile design
+mode that fails contrast. nativetap is the fix: **464 curated mobile design
 rules your agent searches before writing any UI.**
 
 [![Claude Code](https://img.shields.io/badge/Claude_Code-skill-8b5cf6)](https://claude.com/claude-code)
