@@ -16,6 +16,7 @@ every rule, every pattern is about **what users touch with their thumbs**.
 - Fixing "this feels off" mobile UX (gestures, keyboard, safe areas, haptics)
 - Preparing store assets (icons, screenshots)
 - Auditing an app before release (pairs with the shipcheck audit)
+- Proving an agent's mobile literacy (run `scripts/quiz.py` — wrong answers point to the domains to study)
 
 Skip for: web-only UI, backend logic, desktop-only apps.
 
@@ -37,6 +38,23 @@ Top rules (full list in the reference):
 | P2 | Haptics | State changes only (success/error/selection) |
 | P3 | Labels above fields | Placeholder-as-label is a bug |
 | P5 | Cold start | ≤ 2s to first meaningful paint |
+
+## Enforcing + Proving
+
+The skill doesn't just inform — it enforces and measures:
+
+```bash
+# Lint source for rule violations (P0 findings exit 1 = CI gate):
+python3 scripts/audit.py lib/
+
+# Quiz an agent (or yourself) on the rules — generated from the data rows:
+python3 scripts/quiz.py --n 10 --stack flutter
+# wrong answers name the exact domain to study
+
+# Non-interactive: emit questions as JSON, grade answers later:
+python3 scripts/quiz.py --n 10 --stack flutter --seed 7 --json-out q.json
+python3 scripts/quiz.py --n 10 --stack flutter --seed 7 --grade answers.json
+```
 
 ## Searching the Data
 

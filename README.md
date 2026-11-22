@@ -127,6 +127,16 @@ python3 .claude/skills/nativetap/scripts/audit.py lib/ || echo "fix P0s before s
 CI verifies the auditor itself on every push: the bad example **must fail**,
 the good one **must pass**.
 
+**New: quiz mode.** An agent can *prove* its mobile literacy — the quiz is
+generated from the data rows themselves, and wrong answers name the exact
+domain to study:
+
+```bash
+python3 .claude/skills/nativetap/scripts/quiz.py --n 10 --stack flutter
+# "Your agent is guessing on mobile. Install nativetap and retry." — or:
+# "Agent certified: nativetap-literate. Trust it with phone screens."
+```
+
 ## Usage
 
 Once installed, your agent picks it up automatically when you design or
