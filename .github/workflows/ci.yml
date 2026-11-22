@@ -24,6 +24,12 @@ jobs:
           if python3 .claude/skills/nativetap/scripts/search.py zzqxjw > /dev/null 2>&1; then
             echo "expected exit 2 on no match"; exit 1
           fi
+      - name: Audit script works (bad example must exit 1, good must exit 0)
+        run: |
+          if python3 .claude/skills/nativetap/scripts/audit.py example/checkout_screen/without_nativetap.dart > /dev/null 2>&1; then
+            echo "audit should flag the bad example"; exit 1
+          fi
+          python3 .claude/skills/nativetap/scripts/audit.py example/checkout_screen/with_nativetap.dart > /dev/null
       - name: Stats must match README claim (461)
         run: |
           TOTAL=$(python3 .claude/skills/nativetap/scripts/search.py --stats | tail -1 | grep -o '[0-9]*')

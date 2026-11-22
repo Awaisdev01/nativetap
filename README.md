@@ -86,6 +86,22 @@ see [`mcp/README.md`](mcp/README.md). Zero dependencies.
 python3 .claude/skills/nativetap/scripts/search.py "touch target" --max-results 1
 ```
 
+## Audit your own code (new)
+
+```bash
+# Scan a project for mobile rule violations (Dart, Swift, Kotlin):
+python3 .claude/skills/nativetap/scripts/audit.py lib/
+
+# P0 violations exit 1 — use it as a pre-commit or CI gate:
+python3 .claude/skills/nativetap/scripts/audit.py lib/ || echo "fix P0s before shipping"
+```
+
+Catches web-instinct violations: fixed heights around text (clips at 200%
+font scale), top-row primary actions (thumb-unreachable),
+`resizeToAvoidBottomInset: false`, per-keystroke validation errors,
+raw hex colors, `ListView(children:)` for dynamic data, unlabeled
+`IconButton`s, `fullScreenCover` overuse, `ignoresSafeArea(.all)`.
+
 ## Usage
 
 Once installed, your agent picks it up automatically when you design or
