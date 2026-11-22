@@ -137,6 +137,24 @@ python3 .claude/skills/nativetap/scripts/quiz.py --n 10 --stack flutter
 # "Agent certified: nativetap-literate. Trust it with phone screens."
 ```
 
+**Benchmark mode.** Grade AI *models* against each other on the same seeded
+quiz — works with any OpenAI-compatible API (OpenAI, OpenRouter, local
+Ollama). Publish your leaderboard:
+
+```bash
+export NATIVETAP_API_BASE=https://openrouter.ai/api/v1
+export NATIVETAP_API_KEY=sk-...
+python3 scripts/benchmark.py --models gpt-4o,claude-sonnet-4-5,gpt-4o-mini --n 15
+
+# MOBILE DESIGN LITERACY LEADERBOARD (seed 1337)
+#   gpt-4o-mini          ███████████████ 15/15
+#   claude-sonnet-4-5    █████████████░░ 13/15
+#   gpt-4o               ████████████░░░ 12/15
+```
+
+Which models actually know HIG vs Material 3? Now it's measurable — and
+PRs updating the leaderboard are the easiest contribution in the repo.
+
 ## Usage
 
 Once installed, your agent picks it up automatically when you design or

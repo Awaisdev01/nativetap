@@ -1,0 +1,36 @@
+[
+ {
+  "model": "dummy-perfect",
+  "picks": [
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1
+  ],
+  "score": 10,
+  "total": 10
+ },
+ {
+  "model": "dummy-guesser",
+  "picks": [
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2
+  ],
+  "score": 0,
+  "total": 10
+ }
+]
