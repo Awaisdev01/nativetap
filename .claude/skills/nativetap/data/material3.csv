@@ -9,3 +9,4 @@ Cards,Elevated/filled/outlined,"M3 uses tonal elevation (surfaceTint), not shado
 Buttons,"Filled, tonal, elevated, outlined, text",Filled = primary action only; one per view
 Switch,"Track 52x32dp, thumb 24dp on state",Icons optional inside thumb
 TextField,Filled (default) vs outlined,Floating label; supporting text for errors/helper
+M3 Expressive shapes,"Shape tokens per component, not global radius",Large shapes for FABs/cards; motion physics per component; verify contrast on tonal surfaces

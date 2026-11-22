@@ -9,3 +9,4 @@ Press feedback,Highlight 0.95 scale or opacity 0.6,Ripple from touch point,InkWe
 Tab switch,"Cross-fade content, keep container",Fade through M3,AnimatedSwitcher 200ms,150-200ms
 Pull-to-refresh,UIRefreshControl spinner,Material circular indicator,RefreshIndicator,as-triggered
 Reduced motion,"Cross-fade only, no movement",Disable all but opacity,Check MediaQuery.disableAnimations,always-respect
+Predictive back,System-driven cross-activity animation,"Opt-in, NavHost predictive back support, no custom interception",Animate toward the calling screen; do not re-animate on completion,system-controlled

@@ -9,3 +9,4 @@ Search field,"Inside nav bar, collapses on focus",Clear button + cancel appear o
 Swipe actions,Leading = read/state; trailing = destructive,Destructive = red; no confirmation beyond threshold distance
 Pull-to-refresh,UIRefreshControl in scroll views,Not for detail screens
 Tab bar on iPad,Adapts to top tab bar on iPadOS 18+,Follow platform evolution
+Liquid Glass material,Translucent nav/tab bars adapt to content beneath,iOS 26 design language; check tab bar legibility over busy media; fallback opacity for a11y

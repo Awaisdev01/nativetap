@@ -30,7 +30,7 @@ jobs:
             echo "audit should flag the bad example"; exit 1
           fi
           python3 .claude/skills/nativetap/scripts/audit.py example/checkout_screen/with_nativetap.dart > /dev/null
-      - name: Stats must match README claim (461)
+      - name: Stats must match README claim (464+)
         run: |
           TOTAL=$(python3 .claude/skills/nativetap/scripts/search.py --stats | tail -1 | grep -o '[0-9]*')
           echo "rows: $TOTAL"
