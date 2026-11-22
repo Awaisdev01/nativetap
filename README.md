@@ -11,7 +11,7 @@ rules your agent searches before writing any UI.**
 [![MCP](https://img.shields.io/badge/MCP-server-3b82f6)](mcp/README.md)
 [![CI](https://github.com/awaisdev5765/nativetap/actions/workflows/ci.yml/badge.svg)](https://github.com/awaisdev5765/nativetap/actions/workflows/ci.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
-[![v1.0.0](https://img.shields.io/badge/version-1.0.0-blue)](https://github.com/awaisdev5765/nativetap/releases)
+[![v1.0.0](https://img.shields.io/badge/version-1.1.0-blue)](https://github.com/awaisdev5765/nativetap/releases)
 
 Works with **Claude Code, Cursor, Codex, Windsurf, Antigravity, Kiro, Copilot**
 — any agent that reads SKILL.md files, plus any MCP client.
