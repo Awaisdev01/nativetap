@@ -8,9 +8,9 @@
 
 [![Claude Code](https://img.shields.io/badge/Claude_Code-skill-8b5cf6)](https://claude.com/claude-code)
 [![MCP](https://img.shields.io/badge/MCP-server-3b82f6)](mcp/README.md)
-[![CI](https://github.com/awaisdev5765/nativetap/actions/workflows/ci.yml/badge.svg)](https://github.com/awaisdev5765/nativetap/actions/workflows/ci.yml)
+[![CI](https://github.com/Awaisdev01/nativetap/actions/workflows/ci.yml/badge.svg)](https://github.com/Awaisdev01/nativetap/actions/workflows/ci.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
-[![v1.1.0](https://img.shields.io/badge/version-1.1.0-blue)](https://github.com/awaisdev5765/nativetap/releases)
+[![v1.1.0](https://img.shields.io/badge/version-1.1.0-blue)](https://github.com/Awaisdev01/nativetap/releases)
 
 *Claude Code · Cursor · Codex · Windsurf · Antigravity · Kiro · Copilot · any MCP client*
 
@@ -56,13 +56,13 @@ it's the design stage of a complete shipping pipeline:
 <summary><b>Claude Code / Antigravity / Kiro</b> (plugin manifest included)</summary>
 
 ```bash
-git clone https://github.com/awaisdev5765/nativetap.git ~/.claude/skills/nativetap
+git clone https://github.com/Awaisdev01/nativetap.git ~/.claude/skills/nativetap
 ```
 
 Or into a single project:
 
 ```bash
-git clone https://github.com/awaisdev5765/nativetap.git .claude/skills/nativetap
+git clone https://github.com/Awaisdev01/nativetap.git .claude/skills/nativetap
 ```
 </details>
 
@@ -287,10 +287,10 @@ issue template.
 
 | | Tool |
 |---|---|
-| 📡 **New** | [smsaria](https://github.com/awaisdev5765/smsaria) — open-source AI gateway for basic phones (SMS + USSD) |
-| Design | [nativetap](https://github.com/awaisdev5765/nativetap) — mobile design intelligence |
-| Shell | [bashproof](https://github.com/awaisdev5765/bashproof) — agent-proof quoting |
-| Audit | [diffconscience](https://github.com/awaisdev5765/diffconscience) — pre-handoff diff audit |
+| 📡 **New** | [smsaria](https://github.com/Awaisdev01/smsaria) — open-source AI gateway for basic phones (SMS + USSD) |
+| Design | [nativetap](https://github.com/Awaisdev01/nativetap) — mobile design intelligence |
+| Shell | [bashproof](https://github.com/Awaisdev01/bashproof) — agent-proof quoting |
+| Audit | [diffconscience](https://github.com/Awaisdev01/diffconscience) — pre-handoff diff audit |
 | Launch | [shipcheck](https://pub.dev/packages/shipcheck) — release-readiness |
 | AI features | [promptguard](https://pub.dev/packages/promptguard) — prompt regression tests |
 

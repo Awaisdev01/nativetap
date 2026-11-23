@@ -2,7 +2,7 @@
 
 ## ChatGPT (DALL·E) image prompt — copy-paste this
 
-> Create a sleek, premium dark-tech social media banner, 1200x628 pixels (LinkedIn link-post size). Deep navy-black background (#0a0e1a) with subtle purple and blue radial glows in the corners. On the right side: two floating 3D smartphone mockups tilted at slight angles, screens glowing faintly, connected to thin neon circuit-like lines suggesting "AI + mobile". On the left: bold modern sans-serif headline reading "nativetap" in large white letters, with the subtitle "A mobile design rulebook for AI coding agents — 461 rules, free & open source" in gradient purple-to-blue text. Below it a row of four small glassmorphic stat chips reading "42 domains", "461 rows", "40 rules", "0 deps". Bottom-left small URL text: "github.com/awaisdev5765/nativetap". Style: modern SaaS product launch, glassmorphism, soft glow, high contrast, professional developer-tool aesthetic. No clutter, clean negative space, crisp vector look.
+> Create a sleek, premium dark-tech social media banner, 1200x628 pixels (LinkedIn link-post size). Deep navy-black background (#0a0e1a) with subtle purple and blue radial glows in the corners. On the right side: two floating 3D smartphone mockups tilted at slight angles, screens glowing faintly, connected to thin neon circuit-like lines suggesting "AI + mobile". On the left: bold modern sans-serif headline reading "nativetap" in large white letters, with the subtitle "A mobile design rulebook for AI coding agents — 461 rules, free & open source" in gradient purple-to-blue text. Below it a row of four small glassmorphic stat chips reading "42 domains", "461 rows", "40 rules", "0 deps". Bottom-left small URL text: "github.com/Awaisdev01/nativetap". Style: modern SaaS product launch, glassmorphism, soft glow, high contrast, professional developer-tool aesthetic. No clutter, clean negative space, crisp vector look.
 
 Tip: generate at the widest option ChatGPT offers, then crop to 1200×628 (LinkedIn shows ~1.91:1 for link previews and 1200×627 for single images).
 
@@ -40,7 +40,7 @@ Alternatives:
 > 🚀 Store assets: every icon size, screenshot strategy, keyword rules
 >
 > ⚙️ Zero dependencies · pure CSV + a search script · works offline · MIT license
-> ⭐ Star it: github.com/awaisdev5765/nativetap
+> ⭐ Star it: github.com/Awaisdev01/nativetap
 >
 > It's also stage 1 of a complete shipping pipeline:
 > nativetap (design it right) → prism_doctor (audit the code) → shipcheck (audit the launch)
